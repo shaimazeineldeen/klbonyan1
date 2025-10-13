@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> الإستجابة للطوارئ - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+   
+.lang-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+  
+  left: 80px; 
+}
+
+html[dir="ltr"] .lang-btn {
+  left: auto;  
+  right: 80px; 
+}
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+  </style>
+</head>
+<body>
+<header>
+ 
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+    
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+           <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="sub-header">
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="Emergency Response.html" class="home-link">
+    <i class="fas fa-book-open"></i>
+    <span id="program-text" data-ar="البرامج" data-en="Programs">البرامج</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="Emergency Response.html" class="home-link">
+    <i class="fas fa-first-aid"></i>
+    <span id="education-text" data-ar="الإستجابة للطوارئ T4P" data-en="Emergency Response:T4P">الإستجابة للطوارئ T4P</span>
+  </a>
+</div>
+
+
+
+<div class="progra-image-wrapper">
+  <img src="img/تم3.jpg" alt="الإستجابة للطوارئ" class="program-image">
+  <video controls>
+          <source src="vid/WhatsApp Video 2025-10-03 at 5.01.53 PM.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+   <img src="img/تم15.jpg" alt="الإستجابة للطوارئ" class="program-image">  
+        
+      
+</div>
+<section class="program-section">
+  <h2 id="section-title" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</h2>
+  <h3 class="program-subtitle" id="program-subtitle"
+      data-ar='يعمل كالبنيان على تنفيذ برنامج الاستجابة للطوارئ لدعم الفئات الأكثر هشاشة، من خلال توزيع المياه النظيفة، الطرود الصحية والغذائية، الفواكه، وحملات التوعية، ضمن تدخلات إنسانية شاملة تراعي العدالة الاجتماعية والشمول.<br><br> يأتي هذا التدخل استجابةً لغياب الأمن الغذائي، وتصاعد نداءات الاستغاثة من العائلات النازحة التي فقدت الحد الأدنى من مقومات الحياة'
+      data-en='Kalbonyan implements an emergency response program to support the most vulnerable groups, through distributing clean water, health and food parcels, fruits, and awareness campaigns, within comprehensive humanitarian interventions that consider social justice and inclusivity.<br><br> This intervention responds to the lack of food security and the rising distress calls from displaced families who have lost the basic necessities of life.'>
+      يعمل كالبنيان على تنفيذ برنامج الاستجابة للطوارئ لدعم الفئات الأكثر هشاشة، من خلال توزيع المياه النظيفة، الطرود الصحية والغذائية، الفواكه، وحملات التوعية، ضمن تدخلات إنسانية شاملة تراعي العدالة الاجتماعية والشمول.<br><br> يأتي هذا التدخل استجابةً لغياب الأمن الغذائي، وتصاعد نداءات الاستغاثة من العائلات النازحة التي فقدت الحد الأدنى من مقومات الحياة
+  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="idea-title" data-ar="الأهداف" data-en="Objectives">الأهداف</h4>
+  <h3 id="idea-list"
+      data-ar='توفير الغذاء والماء والخدمات الأساسية بسرعة للعائلات المتضررة، ودعم صمود الفئات الهشة عبر تدخلات إغاثية عاجلة، مع تعزيز الوعي المجتمعي حول الوقاية والطوارئ، وضمان استجابة إنسانية عادلة وشاملة، بالتنسيق المستمر مع الشركاء لتحقيق أثر أوسع وأعمق'
+      data-en='Provide food, water, and essential services quickly to affected families, support the resilience of vulnerable groups through urgent relief interventions, raise community awareness about prevention and emergencies, and ensure a fair and comprehensive humanitarian response, in continuous coordination with partners to achieve broader and deeper impact.'>
+ توفير الغذاء والماء والخدمات الأساسية بسرعة للعائلات المتضررة، ودعم صمود الفئات الهشة عبر تدخلات إغاثية عاجلة، مع تعزيز الوعي المجتمعي حول الوقاية والطوارئ، وضمان استجابة إنسانية عادلة وشاملة، بالتنسيق المستمر مع الشركاء لتحقيق أثر أوسع وأعمق
+    </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="activities-title" data-ar="ماذا يقدم البرنامج؟" data-en="what the program provides?">ماذا يقدم البرنامج</h4>
+  <ul id="activities-list"
+      data-ar='
+        <li>توزيع مياه شرب نظيفة وآمنة للعائلات المتضررة.</li>
+        <li>تقديم طرود غذائية وصحية طارئة للفئات الهشة.</li>
+        <li>توزيع الفواكه والمساعدات الغذائية الطازجة.</li>
+        <li>تنفيذ حملات توعية حول الوقاية والإجراءات الصحية في أوقات الطوارئ.</li>
+        <li>تنسيق العمل مع المؤسسات الشريكة لضمان وصول المساعدات بشكل فعّال.</li>
+        <li>متابعة احتياجات المستفيدين وتقييم الأوضاع لضبط التدخلات المستمرة.</li>'
+      data-en='
+        <li>Distribute clean and safe drinking water to affected families.</li>
+        <li>Provide emergency food and health parcels for vulnerable groups.</li>
+        <li>Distribute fresh fruits and food assistance.</li>
+        <li>Conduct awareness campaigns on prevention and health measures during emergencies.</li>
+        <li>Coordinate with partner institutions to ensure effective delivery of aid.</li>
+        <li>Monitor beneficiaries’ needs and assess situations to adjust ongoing interventions.</li>'>
+   <li>توزيع مياه شرب نظيفة وآمنة للعائلات المتضررة.</li>
+        <li>تقديم طرود غذائية وصحية طارئة للفئات الهشة.</li>
+        <li>توزيع الفواكه والمساعدات الغذائية الطازجة.</li>
+        <li>تنفيذ حملات توعية حول الوقاية والإجراءات الصحية في أوقات الطوارئ.</li>
+        <li>تنسيق العمل مع المؤسسات الشريكة لضمان وصول المساعدات بشكل فعّال.</li>
+        <li>متابعة احتياجات المستفيدين وتقييم الأوضاع لضبط التدخلات المستمرة.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="output-title" data-ar="المخرجات" data-en="Outputs">المخرجات</h4>
+  <h3 id="output-list"
+      data-ar='توفير الدعم الغذائي والمائي الطارئ لأكثر من آلاف العائلات المتضررة، تقديم طرود صحية تساهم في تعزيز الصحة العامة، تنفيذ حملات توعية تزيد من وعي المجتمع بمخاطر الطوارئ، وتعزيز التعاون مع الشركاء لضمان استدامة وتأثير التدخلات في ظل الظروف الصعبة'
+      data-en='Provide emergency food and water support to thousands of affected families, deliver health parcels that contribute to public health, conduct awareness campaigns to raise community awareness of emergency risks, and enhance cooperation with partners to ensure sustainability and impact of interventions under difficult circumstances.'>
+
+توفير الدعم الغذائي والمائي الطارئ لأكثر من آلاف العائلات المتضررة، تقديم طرود صحية تساهم في تعزيز الصحة العامة، تنفيذ حملات توعية تزيد من وعي المجتمع بمخاطر الطوارئ، وتعزيز التعاون مع الشركاء لضمان استدامة وتأثير التدخلات في ظل الظروف الصعبة
+  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="recommendations-title" data-ar="التوصيات" data-en="Recommendations">التوصيات</h4>
+  <h3 id="recommendations-list"
+      data-ar='ترتكز على ضرورة توسيع نطاق الاستجابة الطارئة لتشمل المزيد من الأسر المحتاجة، تعزيز التمويل لضمان استمرارية تقديم المساعدات الحيوية، تحسين آليات التنسيق مع الجهات الشريكة لضمان سرعة وفعالية الوصول للمستفيدين، ودمج التوعية المجتمعية بشكل مستدام لتعزيز قدرة المجتمع على مواجهة الأزمات المستقبلية.'
+      data-en='Focus on expanding the scope of emergency response to include more needy families, enhance funding to ensure continuity of vital aid, improve coordination mechanisms with partner entities to ensure fast and effective beneficiary reach, and integrate community awareness sustainably to strengthen the community’s capacity to face future crises.'>
+ترتكز على ضرورة توسيع نطاق الاستجابة الطارئة لتشمل المزيد من الأسر المحتاجة، تعزيز التمويل لضمان استمرارية تقديم المساعدات الحيوية، تحسين آليات التنسيق مع الجهات الشريكة لضمان سرعة وفعالية الوصول للمستفيدين، ودمج التوعية المجتمعية بشكل مستدام لتعزيز قدرة المجتمع على مواجهة الأزمات المستقبلية  </h3>
+</section>
+
+
+<section class="slider-section">
+  <div class="slider-wrapper">
+<h2 class="slider-title" 
+    data-ar="شاهد لقطاتنا" 
+    data-en="Watch Our Moments">
+  شاهد لقطاتنا
+</h2>
+    <div class="slider-container">
+      <div class="arrow arrow-left">&#10094;</div>
+      <div class="arrow arrow-right">&#10095;</div>
+      <div class="slider-track">
+            <div class="slider-item"><img src="img/تم1.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/تم2.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/تم9.jpg" alt="صورة تعليم 3"></div>
+        <div class="slider-item"><img src="img/تم4.jpg" alt="صورة تعليم 4"></div>
+         <div class="slider-item"><img src="img/تم6.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item"><img src="img/تم7.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/تم8.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/تم10.jpg" alt="صورة تعليم 4"></div>
+         <div class="slider-item"><img src="img/تم11.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item center"><img src="img/تم5.jpg" alt="صورة تعليم 5"></div>
+         <div class="slider-item"><img src="img/تم12.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/تم13.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/تم14.jpg" alt="صورة تعليم 3"></div>
+          <div class="slider-item"><img src="img/تم16.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item"><img src="img/تم17.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/تم18.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/تم20.jpg" alt="صورة تعليم 3"></div>
+        <div class="slider-item"><img src="img/تم21.jpg" alt="صورة تعليم 4"></div>
+         <div class="slider-item"><img src="img/تم22.jpg" alt="صورة تعليم 4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+</footer>
+<script>
+const track = document.querySelector('.slider-track');
+const items = Array.from(document.querySelectorAll('.slider-item'));
+const container = document.querySelector('.slider-container');
+
+let centerIndex = Math.floor(items.length / 2);
+
+function updateCenter() {
+  items.forEach(item => item.classList.remove('center'));
+  const centerItem = items[centerIndex];
+  centerItem.classList.add('center');
+
+  const containerRect = container.getBoundingClientRect();
+  const itemRect = centerItem.getBoundingClientRect();
+
+  
+  let translateX = itemRect.left + itemRect.width/2 - (containerRect.left + containerRect.width/2);
+
+  
+  const currentTransform = track.style.transform.match(/-?\d+\.?\d*/);
+  const currentTranslate = currentTransform ? parseFloat(currentTransform[0]) : 0;
+  track.style.transform = `translateX(${currentTranslate - translateX}px)`;
+}
+
+
+updateCenter();
+
+
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  if(centerIndex > 0) {
+    centerIndex--;
+    updateCenter();
+  }
+});
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  if(centerIndex < items.length - 1) {
+    centerIndex++;
+    updateCenter();
+  }
+});
+
+</script>
+<script>
+let currentLang = "ar";
+
+const translations = {
+  ar: {
+    homeText: "الرئيسية",
+    programText: "البرامج",
+    educationText: "الإستجابة للطوارئ T4P",
+    sectionTitle: "الإستجابة للطوارئ T4P",
+programSubtitle: `يعمل كالبنيان على تنفيذ برنامج الاستجابة للطوارئ لدعم الفئات الأكثر هشاشة، من خلال توزيع المياه النظيفة، الطرود الصحية والغذائية، الفواكه، وحملات التوعية، ضمن تدخلات إنسانية شاملة تراعي العدالة الاجتماعية والشمول.  
+يأتي هذا التدخل استجابةً لغياب الأمن الغذائي، وتصاعد نداءات الاستغاثة من العائلات النازحة التي فقدت الحد الأدنى من مقومات الحياة.`,
+   ideaTitle: "الأهداف",
+    outputTitle: "المخرجات",
+    activitiesTitle: "الأنشطة",
+    recommendationsTitle: "التوصيات",
+    idealist: [
+"توفير الغذاء والماء والخدمات الأساسية بسرعة للعائلات المتضررة، ودعم صمود الفئات الهشة عبر تدخلات إغاثية عاجلة، مع تعزيز الوعي المجتمعي حول الوقاية والطوارئ، وضمان استجابة إنسانية عادلة وشاملة، بالتنسيق المستمر مع الشركاء لتحقيق أثر أوسع وأعمق"    ],
+    outputlist: [
+      "توفير الدعم الغذائي والمائي الطارئ لأكثر من آلاف العائلات المتضررة، تقديم طرود صحية تساهم في تعزيز الصحة العامة، تنفيذ حملات توعية تزيد من وعي المجتمع بمخاطر الطوارئ، وتعزيز التعاون مع الشركاء لضمان استدامة وتأثير التدخلات في ظل الظروف الصعبة"
+    ],
+    activitieslist: [
+  "توزيع مياه شرب نظيفة وآمنة للعائلات المتضررة.",
+  "تقديم طرود غذائية وصحية طارئة للفئات الهشة.",
+  "توزيع الفواكه والمساعدات الغذائية الطازجة.",
+  "تنفيذ حملات توعية حول الوقاية والإجراءات الصحية في أوقات الطوارئ.",
+  "تنسيق العمل مع المؤسسات الشريكة لضمان وصول المساعدات بشكل فعّال.",
+  "متابعة احتياجات المستفيدين وتقييم الأوضاع لضبط التدخلات المستمرة."
+],
+
+    recommendationslist: [
+      " ترتكز على ضرورة توسيع نطاق الاستجابة الطارئة لتشمل المزيد من الأسر المحتاجة، تعزيز التمويل لضمان استمرارية تقديم المساعدات الحيوية، تحسين آليات التنسيق مع الجهات الشريكة لضمان سرعة وفعالية الوصول للمستفيدين، ودمج التوعية المجتمعية بشكل مستدام لتعزيز قدرة المجتمع على مواجهة الأزمات المستقبلية."
+    ]
+  },
+  en: {
+    homeText: "Home",
+    programText: "Programs",
+    educationText: "Emergency Response",
+    sectionTitle: "Emergency Response",
+   programSubtitle: "Kalbonyan works on implementing the Emergency Response Program to support the most vulnerable groups by distributing clean water, health and food parcels, fresh fruits, and awareness campaigns, within comprehensive humanitarian interventions that ensure social justice and inclusiveness.\n\nThis intervention comes in response to the lack of food security and the increasing distress calls from displaced families who have lost the minimum essentials of life.",
+
+    ideaTitle: "Objectives",
+    outputTitle: "Outputs",
+    activitiesTitle: "Activities",
+    recommendationsTitle: "Recommendations",
+    idealist: [
+      "Providing food, water, and essential services quickly to affected families, supporting the resilience of vulnerable groups through urgent relief interventions, raising community awareness on prevention and emergency measures, and ensuring a fair and comprehensive humanitarian response, in continuous coordination with partners to achieve a broader and deeper impact."
+    ],
+    outputlist: [
+      "Providing emergency food and water support to thousands of affected families, delivering health parcels that contribute to enhancing public health, conducting awareness campaigns to raise community understanding of emergency risks, and strengthening collaboration with partners to ensure the sustainability and impact of interventions under challenging conditions."
+    ],
+    activitieslist: [
+  "Distributing clean and safe drinking water to affected families.",
+  "Providing emergency food and health parcels to vulnerable groups.",
+  "Distributing fresh fruits and food aid.",
+  "Conducting awareness campaigns on prevention and health measures during emergencies.",
+  "Coordinating with partner organizations to ensure effective delivery of aid.",
+  "Monitoring beneficiaries' needs and assessing situations to adjust ongoing interventions."
+],
+
+    recommendationslist: [
+    "It focuses on the need to expand the scope of emergency response to include more needy families, enhance funding to ensure the continuity of vital assistance, improve coordination mechanisms with partner organizations to guarantee rapid and effective delivery to beneficiaries, and integrate community awareness sustainably to strengthen the community's capacity to face future crises."
+    ]
+  }
+};
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  const t = translations[currentLang];
+
+
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+
+  document.getElementById("section-title").textContent = t.sectionTitle;
+  document.getElementById("program-subtitle").textContent = t.programSubtitle;
+  document.getElementById("idea-title").textContent = t.ideaTitle;
+  document.getElementById("output-title").textContent = t.outputTitle;
+  document.getElementById("activities-title").textContent = t.activitiesTitle;
+  document.getElementById("recommendations-title").textContent = t.recommendationsTitle;
+
+
+  ["idea-list", "output-list", "activities-list", "recommendations-list"].forEach(id => {
+    const ul = document.getElementById(id);
+    if (ul) {
+      ul.innerHTML = "";
+      const listName = id.replace("-list","");
+      t[listName + "list"].forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  });
+
+ 
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+  
+}
+
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+
+</body>
+</html>

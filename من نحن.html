@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن</title>
+  <link rel="stylesheet" href="volunteer.css">
+   <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+  
+.lang-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+  
+  left: 80px; 
+}
+
+html[dir="ltr"] .lang-btn {
+  left: auto;  
+  right: 80px; 
+}
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+  </style>
+</head>
+<body>
+ 
+<header>
+  
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+    
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+     
+           <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+         
+       
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="projects.html" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <div class="sub-header">
+ <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="من نحن.html" class="home-link">
+  <i class="fas fa-book"></i>
+  <span id="program-text" data-ar="من نحن " data-en="About Us ">من نحن</span>
+  </a>
+</div>
+<div class="progra-image-wrapper">
+  <img src="img/تم9.jpg" alt="الإستجابة للطوارئ" class="program-image">
+  <video controls>
+          <source src="vid/SnapInsta.to_AQPFWsoxCbKQqmf1kmLB8K6DUgGVEwZ3kZ3suf12eP8pKFkfm729Ie7M5ZoZXLuPXhMLeO1gBTZz7dQFtUTnQWgClY0tD7QlHsEUMcU.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+   <img src="img/من نحن.jpg" alt="الإستجابة للطوارئ" class="program-image">  
+        
+      
+</div>
+<section class="about-section">
+  <form class="about-form">
+    <div class="form-group">
+      <h3 id="about-title">
+        <i class="fas fa-info-circle"></i> 
+        <span class="title-text" data-ar="حول:" data-en="About:">حول:</span>
+      </h3>
+      <p id="about-text" 
+         data-ar='"كالبنيان" هي مجموعة شبابية مجتمعية تأسست عام 2019 في قطاع غزة، تجمع بين الشغف الشبابي والعمل الإنساني بروح تطوعية، انطلاقًا من إيماننا العميق بدور الشباب في تعزيز التماسك المجتمعي وتحقيق العدالة والكرامة للجميع. ننشط في المجالات المجتمعية والإنسانية والشبابية، من خلال تنفيذ مبادرات ومشاريع وحملات تُعزز قدرة المجتمع على الصمود، وتُشرك الفئات المهمشة – خاصة ذوي الإعاقة والنساء – في عمليات البناء والتنمية والتغيير الإيجابي. نؤمن أن التغيير الحقيقي يبدأ من القاعدة، وأن للشباب دورًا محوريًا في قيادة التحول المجتمعي. لذا، نقوم بتشكيل فرق شبابية ميدانية، تعمل على تحديد الاحتياجات، وإعداد خطط واضحة لتنفيذ مبادرات واقعية قائمة على المشاركة المجتمعية، بالشراكة مع جهات محلية وإنسانية، مع توثيق الأثر ونقل صوت المستفيدين. نحرص دائمًا على دمج رؤية الاستدامة في كل ما نقوم به، من خلال بناء قدرات الشباب وتأهيلهم لقيادة العمل المجتمعي في المستقبل.'
+         data-en='"Kalbonyan" is a youth community group founded in 2019 in the Gaza Strip, combining youthful passion with humanitarian work in a voluntary spirit, stemming from our deep belief in the role of youth in enhancing social cohesion and achieving justice and dignity for all. We are active in community, humanitarian, and youth fields by implementing initiatives, projects, and campaigns that strengthen the community's resilience and engage marginalized groups—especially people with disabilities and women—in processes of development, construction, and positive change. We believe real change starts at the grassroots, and youth play a pivotal role in leading societal transformation. Therefore, we form field youth teams that identify needs and develop clear plans to implement practical initiatives based on community participation, in partnership with local and humanitarian organizations, while documenting impact and amplifying the voices of beneficiaries. We are always keen to integrate sustainability into everything we do by building youth capacities and preparing them to lead community work in the future.'
+      >
+"كالبنيان" هي مجموعة شبابية مجتمعية تأسست عام 2019 في قطاع غزة، تجمع بين الشغف الشبابي والعمل الإنساني بروح تطوعية، انطلاقًا من إيماننا العميق بدور الشباب في تعزيز التماسك المجتمعي وتحقيق العدالة والكرامة للجميع. ننشط في المجالات المجتمعية والإنسانية والشبابية، من خلال تنفيذ مبادرات ومشاريع وحملات تُعزز قدرة المجتمع على الصمود، وتُشرك الفئات المهمشة – خاصة ذوي الإعاقة والنساء – في عمليات البناء والتنمية والتغيير الإيجابي. نؤمن أن التغيير الحقيقي يبدأ من القاعدة، وأن للشباب دورًا محوريًا في قيادة التحول المجتمعي. لذا، نقوم بتشكيل فرق شبابية ميدانية، تعمل على تحديد الاحتياجات، وإعداد خطط واضحة لتنفيذ مبادرات واقعية قائمة على المشاركة المجتمعية، بالشراكة مع جهات محلية وإنسانية، مع توثيق الأثر ونقل صوت المستفيدين. نحرص دائمًا على دمج رؤية الاستدامة في كل ما نقوم به، من خلال بناء قدرات الشباب وتأهيلهم لقيادة العمل المجتمعي في المستقبل    </p>
+    </div>
+
+    <div class="form-group">
+      <h3 id="vision-title">
+        <i class="fas fa-eye"></i> 
+        <span class="title-text" data-ar="الرؤية:" data-en="Vision:">الرؤية:</span>
+      </h3>
+      <p id="vision-text" 
+         data-ar='أن تكون "لكالبنيان" كلمةً وقرارًا في المجال المجتمعي، ونموذجًا رياديًا في التنمية والعمل الإنساني، تُسهم في بناء مجتمعٍ متماسك، واعٍ، ومُمكَّن، يزدهر بالخير والعطاء المستدام'
+         data-en='To make Kalbonyan a voice and a decision in the community field, and a pioneering model in development and humanitarian work, contributing to building a cohesive, aware, and empowered society that thrives on goodness and sustainable giving.'
+  >
+  أن تكون "لكالبنيان" كلمةً وقرارًا في المجال المجتمعي، ونموذجًا رياديًا في التنمية والعمل الإنساني، تُسهم في بناء مجتمعٍ متماسك، واعٍ، ومُمكَّن، يزدهر بالخير والعطاء المستدام
+  </p>
+    </div>
+
+    <div class="form-group">
+      <h3 id="mission-title">
+        <i class="fas fa-bullseye"></i> 
+        <span class="title-text" data-ar="الرسالة:" data-en="Mission:">الرسالة:</span>
+      </h3>
+      <p id="mission-text" 
+         data-ar='تسعى كالبنيان إلى ترسيخ القيم الإنسانية، وبناء جسور التعاون المجتمعي عبر مبادرات تنموية، وبرامج دعم وتمكين للفئات المستحقة، بما يضمن أثرًا إيجابيًا عميقًا ومستدامًا في حياة الأفراد والمجتمع'
+         data-en='Kalbonyan seeks to instill human values and build bridges of community cooperation through developmental initiatives and support and empowerment programs for eligible groups, ensuring a deep and sustainable positive impact on the lives of individuals and the community.'
+      
+         >
+         تسعى كالبنيان إلى ترسيخ القيم الإنسانية، وبناء جسور التعاون المجتمعي عبر مبادرات تنموية، وبرامج دعم وتمكين للفئات المستحقة، بما يضمن أثرًا إيجابيًا عميقًا ومستدامًا في حياة الأفراد والمجتمع
+        </p>
+    </div>
+
+    <div class="form-group">
+      <h3 id="objectives-title">
+        <i class="fas fa-tasks"></i> 
+        <span class="title-text" data-ar="الأهداف:" data-en="Objectives:">الأهداف:</span>
+      </h3>
+      <div class="about-form11" id="objectives-text" 
+           data-ar='<p>نسعى في كالبنيان لتحقيق الأثر الإيجابي من خلال أهداف محددة وواضحة، ترتكز على تعزيز الإنسان والمجتمع:</p><ol><li>تمكين الفئات المستهدفة من شباب، نساء، وذوي الإعاقة عبر برامج تنموية وتأهيلية.</li><li>تقديم خدمات مجتمعية فعّالة تلبي احتياجات الإنسان في مختلف جوانب الحياة.</li><li>تنفيذ مبادرات نوعية في مجالات الصحة، التعليم، الدعم النفسي، والعمل الإنساني.</li><li>تعزيز العمل التطوعي والشراكات لتحقيق تأثير مجتمعي أوسع ومستدام.</li><li>ضمان جودة الأداء والاستدامة من خلال الحوكمة، قياس الأثر، والتطوير المؤسسي المستمر.</li></ol>'
+           data-en='<p>At Kalbonyan, we strive to create a positive impact through clear and well-defined goals, focusing on empowering individuals and the community:</p><ol><li>Empower target groups including youth, women, and people with disabilities through developmental and rehabilitative programs.</li><li>Provide effective community services that meet human needs across different aspects of life.</li><li>Implement qualitative initiatives in health, education, psychological support, and humanitarian work.</li><li>Promote volunteerism and partnerships to achieve broader and sustainable community impact.</li><li>Ensure quality performance and sustainability through governance, impact measurement, and continuous institutional development.</li></ol>'
+      >
+    <p>نسعى في كالبنيان لتحقيق الأثر الإيجابي من خلال أهداف محددة وواضحة، ترتكز على تعزيز الإنسان والمجتمع
+    </div>
+    </div>
+
+   <div class="form-group"> <h3 id="strategies-title"> <i class="fas fa-cogs"></i> <span class="title-text" data-ar="الاستراتيجيات:" data-en="Strategies:">الاستراتيجيات:</span> </h3> <div class="about-form11" id="strategies-text"
+     
+           data-ar='<p>تعتمد كالبنيان استراتيجيات واضحة لضمان الأثر المستدام والفعّال في المجتمع:</p><ol><li><strong>التركيز على تنمية قدرات الفئات المستهدفة:</strong> (الشباب، النساء، ذوي الإعاقة) من خلال برامج تدريبية وتعليمية ومهنية، تساعدهم على الاعتماد على الذات، والانخراط في سوق العمل، والمشاركة الفعالة في تنمية المجتمع ليكونوا جزءًا بناء في كالبنيان داخل مجتمعم.<ul><li>برامج بناء المهارات الحياتية والمهنية.</li><li>دعم المشاريع الصغيرة وريادة الأعمال.</li><li>دمج ذوي الإعاقة في الحياة العامة والعملية.</li></ul></li><li><strong>التعاون مع المنظمات المحلية والدولية والقطاع الخاص:</strong> بتنسيق مع الجهات الحكومية لتحقيق أهداف مشتركة وتوسيع نطاق الخدمات والتأثير.<ul><li>توقيع اتفاقيات تعاون مع شركاء استراتيجيين.</li><li>تنفيذ مشاريع مشتركة تخدم المجتمع.</li><li>تبادل الخبرات والموارد لتحقيق أفضل النتائج.</li></ul></li><li><strong>اعتماد أنظمة واضحة للحَوكمة والمتابعة والتقييم:</strong> لضمان جودة الأداء وشفافية العمل، مع تحسين مستمر في العمليات والخدمات.<ul><li>تقييم دوري للأداء والبرامج.</li><li>تقديم تقارير شفافة للمانحين والشركاء.</li><li>تطوير الكوادر والنظم الإدارية بشكل دائم وفق النظام الأساسي.</li></ul></li><li><strong>الاستدامة والابتكار في العمل المجتمعي:</strong> السعي لتحقيق استدامة مالية وتنظيمية من خلال تنويع مصادر الدخل، والاعتماد على حلول مبتكرة في تصميم وتنفيذ المبادرات المجتمعية.<ul><li>إطلاق حملات تمويل مجتمعية ومشاريع مدرّة للدخل.</li><li>استخدام التكنولوجيا في تنفيذ البرامج (منصات، تطبيقات).</li><li>تبني أفكار جديدة لحل مشكلات مجتمعية بطرق غير تقليدية.</li></ul></li></ol>'
+
+     data-en='<p>Kalbonyan relies on clear strategies to ensure sustainable and effective community impact:</p>
+<ol>
+<li><strong>Focus on developing target groups&#39; capacities:</strong> (youth, women, and people with disabilities) through training, educational, and professional programs that help them be self-reliant, integrate into the labor market, and actively participate in community development.
+<ul>
+<li>Life and professional skills development programs.</li>
+<li>Support for small projects and entrepreneurship.</li>
+<li>Inclusion of people with disabilities in public and professional life.</li>
+</ul>
+</li>
+<li><strong>Collaboration with local, international, and private organizations:</strong> Coordinated with government entities to achieve common goals and expand services and impact.
+<ul>
+<li>Signing cooperation agreements with strategic partners.</li>
+<li>Implementing joint projects serving the community.</li>
+<li>Exchanging expertise and resources to achieve best results.</li>
+</ul>
+</li>
+<li><strong>Adopting clear governance, monitoring, and evaluation systems:</strong> To ensure performance quality and transparency, with continuous improvement of operations and services.
+<ul>
+<li>Periodic performance and program evaluation.</li>
+<li>Providing transparent reports to donors and partners.</li>
+<li>Continuous development of staff and administrative systems according to the bylaws.</li>
+</ul>
+</li>
+<li><strong>Sustainability and innovation in community work:</strong> Striving for financial and organizational sustainability through diversifying income sources and relying on innovative solutions in designing and implementing community initiatives.
+<ul>
+<li>Launching community funding campaigns and income-generating projects.</li>
+<li>Using technology in program implementation (platforms, apps).</li>
+<li>Adopting new ideas to solve community problems in non-traditional ways.</li>
+</ul>
+</li>
+</ol>'
+>تعتمد كالبنيان استراتيجيات واضحة...</div>
+
+    <div class="form-group">
+      <h3 id="values-title">
+        <i class="fas fa-heart"></i> 
+        <span class="title-text" data-ar="القيم:" data-en="Values:">القيم:</span>
+      </h3>
+      <div class="about-form11" id="values-text"
+           data-ar='<p>في كالبنيان، نؤمن أن المجتمعات القوية تُبنى على أسس إنسانية راسخة. لذلك، تستند رؤيتنا ورسالتنا إلى القيم التالية:</p><ol><li>الإنسان أولًا: كرامة الإنسان واحتياجاته في قلب كل ما نقوم به.</li><li>المسؤولية المجتمعية: نلتزم بالعمل الجاد والمسؤول تجاه مجتمعنا، ونسعى لإحداث أثر ملموس ومستدام في حياة الناس، خاصة الفئات المهمّشة.</li><li>الشفافية والمساءلة: نعمل بأعلى درجات الشفافية، ونحرص على المساءلة في كل تدخل، من التخطيط وحتى التنفيذ والتقييم.</li><li>التمكين والقيادة: نؤمن بأن التغيير الحقيقي يبدأ من الداخل، لذلك نستثمر في تمكين الأفراد، خاصة الشباب والنساء، ليكونوا قادة في مجتمعاتهم.</li><li>العدالة والمساواة: نرفض كافة أشكال التمييز، ونعمل على ضمان تكافؤ الفرص للجميع، بغض النظر عن النوع أو الخلفية أو الوضع الاجتماعي.</li><li>التكافل والتعاون: نؤمن بأن يدًا واحدة لا تبني، ولذلك نُعزز روح العمل الجماعي، والتعاون مع الشركاء، لتحقيق أهدافنا المشتركة.</li><li>الحفاظ على السلم الأهلي: تحقيق السلام في مجتمعنا هو واجب نلتزم به.</li><li>الابتكار والاستدامة: نطور حلولاً جديدة ونواجه التحديات، ونخطط ونعمل لنضمن استمرارية الأثر.</li></ol>'
+           data-en='<p>At Kalbonyan, we believe that strong communities are built on solid human foundations. Therefore, our vision and mission are based on the following values:</p><ol><li>Human First: The dignity and needs of every person are at the heart of everything we do.</li><li>Social Responsibility: We are committed to diligent and responsible work for our community, aiming to create a tangible and sustainable impact, especially for marginalized groups.</li><li>Transparency and Accountability: We operate with the highest levels of transparency and ensure accountability in every intervention, from planning to implementation and evaluation.</li><li>Empowerment and Leadership: We believe true change starts from within, so we invest in empowering individuals, especially youth and women, to be leaders in their communities.</li><li>Justice and Equality: We reject all forms of discrimination and work to ensure equal opportunities for all, regardless of gender, background, or social status.</li><li>Solidarity and Cooperation: We believe one hand alone cannot build; therefore, we promote teamwork and collaboration with partners to achieve our shared goals.</li><li>Maintaining Social Peace: Achieving peace in our community is a duty we uphold.</li><li>Innovation and Sustainability: We develop new solutions, face challenges, and plan and work to ensure the continuity of impact.</li></ol>'
+      > <p>في كالبنيان، نؤمن أن المجتمعات القوية تُبنى على أسس إنسانية راسخة. لذلك، تستند رؤيتنا ورسالتنا إلى القيم التالي</div>
+    </div>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+ <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+</footer>
+  <script>
+
+ 
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
+  </script>
+  
+</body>
+</html>

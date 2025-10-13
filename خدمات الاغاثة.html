@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> خدممات الإغاثة - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+   .lang-btn {
+  position: absolute;
+  left: 80px;     
+  top: 50%;
+  transform: translateY(-50%); 
+  
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+
+  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+  </style>
+</head>
+<body>
+ <header>
+  
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    <div class="header-center">
+      
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ " data-en="Emergency Response">الإستجابة للطوارئ </a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+        
+           <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+         
+        
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="sub-header">
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-hand-holding-heart"></i>
+    <span id="program-text" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</span>
+  </a>
+ 
+</div>
+
+
+
+
+</div>
+
+
+
+ <style>
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 3px solid #707271;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  background-color: #F0CC8E;
+  border-radius: 15px;
+  border: 3px solid #707271;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.box, .contact-box {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 3px solid #F0CC8E;
+  width: 90%;
+  max-width: 600px;
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 30px;
+}
+
+.box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f9f9f9, #e6f0fa);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.box p:hover {
+  background: linear-gradient(90deg, #d0e6ff, #a6d1ff);
+  color: #000;
+  transform: translateX(5px);
+}
+
+.contact-box h3 {
+  font-size: 20px;
+  color: #235f9f;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-box p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-box strong {
+  color: #0459b4;
+}
+
+
+@media (max-width: 500px) {
+  .main-header {
+    padding: 20px 15px;
+  }
+
+  .main-header h2 {
+    font-size: 28px;
+    padding-right: 15px;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .notice {
+    font-size: 14px;
+    padding: 12px 15px;
+    margin: 10px auto;
+  }
+
+  .box, .contact-box {
+    padding: 15px 20px;
+  }
+
+  .box p, .contact-box p {
+    font-size: 14px;
+  }
+
+  .contact-box h3 {
+    font-size: 16px;
+  }
+}
+
+ 
+  </style>
+</head>
+
+
+ 
+ 
+<body>
+  <section class="container">
+
+ 
+  <div class="notice" data-ar="من حقك تلقي خدمات الإغاثة الإنسانية باحترام وكرامة" data-en="You have the right to receive humanitarian relief services with respect and dignity">
+    من حقك تلقي خدمات الإغاثة الإنسانية باحترام وكرامة
+  </div>
+
+  
+  <h2 data-ar="صندوق الشكاوي" data-en="Complaint Box">صندوق الشكاوي</h2>
+
+
+  <div class="box">
+    <p data-ar="من كان مشاركًا في ارتكاب/محاولة ارتكاب الفعل؟" data-en="Who was involved in committing/attempting the act?">من كان مشاركًا في ارتكاب/محاولة ارتكاب الفعل؟</p>
+    <p data-ar="ماذا حدث؟" data-en="What happened?">ماذا حدث؟</p>
+    <p data-ar="أين حدث؟" data-en="Where did it happen?">أين حدث؟</p>
+    <p data-ar="متى حدث؟" data-en="When did it happen?">متى حدث؟</p>
+  </div>
+
+ 
+  <div class="contact-box">
+    <h2 data-ar="يمكنكم الاتصال بكل سرية تامة وخصوصية لتلقي الدعم النفسي أو الاستشارة أو لتقديم بلاغ/شكوى , عبر الأرقام التالية:" data-en="You can contact confidentially and privately to receive psychological support, consultation, or to submit a report/complaint, via the following numbers:">
+      يمكنكم الاتصال بكل سرية تامة وخصوصية لتلقي الدعم النفسي أو الاستشارة أو لتقديم بلاغ/شكوى , عبر الأرقام التالية:
+    </h2>
+    <p data-ar="خط مؤسسة سوا المجاني: 164" data-en="Sawa Foundation Free Line: 164"><strong>خط مؤسسة سوا المجاني:</strong> 164</p>
+    <p data-ar="سوا عبر الواتس آب: +972594040121" data-en="Sawa via WhatsApp: +972594040121"><strong>سوا عبر الواتس آب:</strong> +972594040121</p>
+    <p data-ar="مسؤول الحماية في فريق كالبنيان: 0593689477" data-en="Protection Officer in KLBONYAN Team: 0593689477"><strong>مسؤول الحماية في فريق كالبنيان:</strong> 0593689477</p>
+    <p data-ar="مسؤول الحماية عبر الواتس آب: +972567033297" data-en="Protection Officer via WhatsApp: +972567033297"><strong>مسؤول الحماية عبر الواتس آب:</strong> +972567033297</p>
+  </div>
+
+  
+  <div class="notice" data-ar="عدم التسامح مطلقاً مع الإستغلال أو الإساءة الجنسية" data-en="Zero tolerance for sexual exploitation or ABUSE">
+    عدم التسامح مطلقاً مع الإستغلال أو الإساءة الجنسية
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:info@example.com">@klbonyan.com</a>
+  </p>
+</footer>
+<script>
+const langBtn = document.querySelector(".lang-btn");
+
+function updateLanguage(lang) {
+  const dir = lang === "ar" ? "rtl" : "ltr";
+  const textAlign = lang === "ar" ? "right" : "left";
+
+  
+  document.querySelectorAll("[data-ar][data-en]").forEach(el => {
+    if(el.closest("footer")) return; 
+    if(el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.tagName === "SELECT") {
+      el.placeholder = el.getAttribute(`data-${lang}`);
+      el.style.textAlign = textAlign;
+      el.style.direction = dir;
+    } else {
+      el.innerHTML = el.getAttribute(`data-${lang}`);
+      el.style.textAlign = textAlign;
+    }
+  });
+
+  
+  document.documentElement.lang = lang;
+  document.documentElement.dir = dir;
+  document.body.dir = dir;
+  document.body.style.direction = dir;
+  document.body.style.textAlign = textAlign;
+
+ 
+  const containers = document.querySelectorAll('.container, .box, .contact-box, .notice, h2, p');
+  containers.forEach(el => {
+    if(el.closest("footer")) return; 
+    el.style.direction = dir;
+    el.style.textAlign = textAlign;
+  });
+
+
+  document.querySelectorAll("footer [data-ar][data-en]").forEach(child => {
+    if(child.tagName !== "INPUT" && child.tagName !== "TEXTAREA" && child.tagName !== "SELECT") {
+      child.innerHTML = child.getAttribute(`data-${lang}`);
+    }
+  });
+
+  
+  if(langBtn) langBtn.textContent = lang === "ar" ? "EN" : "AR";
+
+  
+  localStorage.setItem("siteLang", lang);
+}
+
+
+function toggleLanguage() {
+  const currentLang = localStorage.getItem("siteLang") || "ar";
+  const newLang = currentLang === "ar" ? "en" : "ar";
+  updateLanguage(newLang);
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("siteLang") || "ar";
+  updateLanguage(savedLang);
+});
+
+
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show');
+}
+
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>

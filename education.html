@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج التعليم - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+ <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  
+</head>
+<body>
+<header>
+ 
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+   
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+    
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+                   <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="sub-header">
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="education.html" class="home-link">
+    <i class="fas fa-book-open"></i>
+    <span id="program-text" data-ar="البرامج" data-en="Programs">البرامج</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="education.html" class="home-link">
+    <i class="fas fa-chalkboard-teacher"></i>
+    <span id="education-text" data-ar="التعليم" data-en="Education">التعليم</span>
+  </a>
+</div>
+
+
+
+<div class="progra-image-wrapper">
+<video controls>
+          <source src="vid/SnapInsta.to_AQO2OQBy9jdCFj-FrP5ZzdBsVqO6n95pwmmITMuRrvvVm47FGmB-QYZR_YgxpVVASSeniuLKi5HJaj9Jpxyfw3tEXrvre8RLjIopud4.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+  <video controls>
+          <source src="vid/تعليم.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+  <video controls>
+          <source src="vid/SnapInsta.to_AQMktGsXmiHJBgqwHUqJEp5TrYoUJHor0fvG1D0Lf0qBuxAr8Fq51VmBu8-SJ_d64T8OsnNJr647nA5wRCtGU9HjTezjItS3l6HLmFU.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+        
+      
+</div>
+<section class="program-section">
+  <h2 id="section-title" data-ar="التعليم" data-en="Education">التعليم</h2>
+  <h3 class="program-subtitle" id="program-subtitle" data-ar="التعليم حق أساسي لكل طفل رغم الأزمات" data-en="Education is a fundamental right for every child, even during crises">التعليم حق أساسي لكل طفل رغم الأزمات</h3>
+</section>
+
+
+
+  <section class="program-section">
+
+
+
+
+  <h4 id="idea-title" data-ar="الأهداف" data-en="Objectives">الأهداف</h4>
+  <ul id="idea-list" data-ar='
+    <li>ضمان استمرارية التعليم للأطفال المتأثرين بالحرب.</li>
+    <li>تقليص الفاقد التعليمي الناتج عن تدمير المدارس والانقطاع.</li>
+    <li>توفير بيئة تعليمية آمنة ومدعومة نفسيًا وتقنيًا.</li>
+    <li>تعزيز الصحة النفسية للطلاب من خلال الدعم والتفريغ.</li>
+    <li>رفع وعي الطلاب وأسرهم بأهمية التعليم في الأزمات.</li>'
+      data-en='
+    <li>Ensure continuity of education for children affected by war.</li>
+    <li>Reduce learning loss caused by school destruction and interruptions.</li>
+    <li>Provide a safe and psychologically and technically supported learning environment.</li>
+    <li>Enhance students’ mental health through support and stress relief.</li>
+    <li>Raise awareness among students and their families about the importance of education during crises.</li>'>
+    <li>ضمان استمرارية التعليم للأطفال المتأثرين بالحرب.</li>
+    <li>تقليص الفاقد التعليمي الناتج عن تدمير المدارس والانقطاع.</li>
+    <li>توفير بيئة تعليمية آمنة ومدعومة نفسيًا وتقنيًا.</li>
+    <li>تعزيز الصحة النفسية للطلاب من خلال الدعم والتفريغ.</li>
+    <li>رفع وعي الطلاب وأسرهم بأهمية التعليم في الأزمات.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="activities-title" data-ar="ماذا يقدم البرنامج؟" data-en="what the program provides?">ماذا يقدم البرنامج</h4>
+  <ul id="activities-list" data-ar='
+    <li>إنشاء مساحات تعليمية آمنة ومجهزة بالكهرباء والإنترنت.</li>
+    <li>تقديم دروس خصوصية لدعم التحصيل الأكاديمي.</li>
+    <li>استهداف طلاب التوجيهي بدعم مكثف ومخصص.</li>
+    <li>تنفيذ أنشطة ترفيهية لتعزيز الصحة النفسية للطلاب.</li>
+    <li>عقد جلسات توعية للطلبة وأهاليهم حول أهمية التعليم.</li>
+    <li>بناء شراكات مع مؤسسات تعليمية لضمان استمرارية البرنامج.</li>
+    <li>تنفيذ حملات رقمية على السوشال ميديا لإيصال صوت الطلاب وتوعية المجتمع بأهمية التعليم.</li>'
+      data-en='
+    <li>Establish safe learning spaces equipped with electricity and internet.</li>
+    <li>Provide private tutoring to support academic achievement.</li>
+    <li>Target high school students with intensive and dedicated support.</li>
+    <li>Conduct recreational activities to promote students’ mental health.</li>
+    <li>Hold awareness sessions for students and their families on the importance of education.</li>
+    <li>Build partnerships with educational institutions to ensure program continuity.</li>
+    <li>Implement digital campaigns on social media to amplify students’ voices and raise community awareness on education.</li>'>
+    <li>إنشاء مساحات تعليمية آمنة ومجهزة بالكهرباء والإنترنت.</li>
+    <li>تقديم دروس خصوصية لدعم التحصيل الأكاديمي.</li>
+    <li>استهداف طلاب التوجيهي بدعم مكثف ومخصص.</li>
+    <li>تنفيذ أنشطة ترفيهية لتعزيز الصحة النفسية للطلاب.</li>
+    <li>عقد جلسات توعية للطلبة وأهاليهم حول أهمية التعليم.</li>
+    <li>بناء شراكات مع مؤسسات تعليمية لضمان استمرارية البرنامج.</li>
+    <li>تنفيذ حملات رقمية على السوشال ميديا لإيصال صوت الطلاب وتوعية المجتمع بأهمية التعليم.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="output-title" data-ar="المخرجات" data-en="Outputs">المخرجات</h4>
+  <ul id="output-list" data-ar='
+    <li>تمكين عدد من الأطفال من العودة إلى بيئة تعليمية آمنة ومهيأة.</li>
+    <li>رفع مستوى التحصيل الأكاديمي للطلاب المستفيدين من الدروس الخصوصية.</li>
+    <li>تحسين فرص طلاب الثانوية العامة في تجاوز الامتحانات بنجاح.</li>
+    <li>توفير دعم نفسي فعّال للطلبة من خلال أنشطة ترفيهية مخصصة.</li>
+    <li>زيادة وعي الأسر بأهمية التعليم وطرق دعمه في ظل الأزمات.</li>
+    <li>تعزيز التنسيق مع المؤسسات التعليمية لضمان استمرارية وتأثير البرنامج.</li>
+    <li>تسليط الضوء على قضايا التعليم الأساسية.</li>'
+      data-en='
+    <li>Enable a number of children to return to a safe and prepared learning environment.</li>
+    <li>Improve academic achievement for students benefiting from private tutoring.</li>
+    <li>Enhance high school students’ chances of passing exams successfully.</li>
+    <li>Provide effective psychological support for students through dedicated recreational activities.</li>
+    <li>Increase family awareness on the importance of education and ways to support it during crises.</li>
+    <li>Strengthen coordination with educational institutions to ensure program continuity and impact.</li>
+    <li>Highlight key education issues.</li>'>
+    <li>تمكين عدد من الأطفال من العودة إلى بيئة تعليمية آمنة ومهيأة.</li>
+    <li>رفع مستوى التحصيل الأكاديمي للطلاب المستفيدين من الدروس الخصوصية.</li>
+    <li>تحسين فرص طلاب الثانوية العامة في تجاوز الامتحانات بنجاح.</li>
+    <li>توفير دعم نفسي فعّال للطلبة من خلال أنشطة ترفيهية مخصصة.</li>
+    <li>زيادة وعي الأسر بأهمية التعليم وطرق دعمه في ظل الأزمات.</li>
+    <li>تعزيز التنسيق مع المؤسسات التعليمية لضمان استمرارية وتأثير البرنامج.</li>
+    <li>تسليط الضوء على قضايا التعليم الأساسية.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="recommendations-title" data-ar="التوصيات" data-en="Recommendations">التوصيات</h4>
+  <ul id="recommendations-list" data-ar='
+    <li>توسيع المساحات التعليمية الآمنة والمجهزة لضمان شمولية أكبر.</li>
+    <li>تعزيز الشراكات مع الجهات الحكومية والمؤسسات التعليمية لضمان استدامة الدعم.</li>
+    <li>تطوير برامج الدعم النفسي والتربوي لمواجهة التأثيرات النفسية الناتجة عن الأزمات.</li>
+    <li>تدريب المعلمين على أساليب التعليم في الظروف الطارئة واستخدام التكنولوجيا.</li>
+    <li>تنفيذ حملات توعية مجتمعية لأهمية استمرار التعليم رغم التحديات.</li>
+    <li>زيادة تقديم الخدمات التقنية مثل (معدات التعليم - الكشافات - القرطاسية - الغذاء).</li>
+    <li>اعتماد آليات متابعة وتقييم دورية لتحسين جودة البرنامج وفعاليته.</li>'
+      data-en='
+    <li>Expand safe and equipped learning spaces to ensure greater inclusivity.</li>
+    <li>Strengthen partnerships with government entities and educational institutions to ensure sustainable support.</li>
+    <li>Develop psychological and educational support programs to address crisis-related mental impacts.</li>
+    <li>Train teachers on teaching methods in emergency situations and technology use.</li>
+    <li>Conduct community awareness campaigns on the importance of continuing education despite challenges.</li>
+    <li>Increase provision of technical services (learning equipment, projectors, stationery, food).</li>
+    <li>Adopt periodic monitoring and evaluation mechanisms to improve program quality and effectiveness.</li>'>
+    <li>توسيع المساحات التعليمية الآمنة والمجهزة لضمان شمولية أكبر.</li>
+    <li>تعزيز الشراكات مع الجهات الحكومية والمؤسسات التعليمية لضمان استدامة الدعم.</li>
+    <li>تطوير برامج الدعم النفسي والتربوي لمواجهة التأثيرات النفسية الناتجة عن الأزمات.</li>
+    <li>تدريب المعلمين على أساليب التعليم في الظروف الطارئة واستخدام التكنولوجيا.</li>
+    <li>تنفيذ حملات توعية مجتمعية لأهمية استمرار التعليم رغم التحديات.</li>
+    <li>زيادة تقديم الخدمات التقنية مثل (معدات التعليم - الكشافات - القرطاسية - الغذاء).</li>
+    <li>اعتماد آليات متابعة وتقييم دورية لتحسين جودة البرنامج وفعاليته.</li>
+  </ul>
+</section>
+
+
+<section class="slider-section">
+  <div class="slider-wrapper">
+<h2 class="slider-title" 
+    data-ar="شاهد لقطاتنا" 
+    data-en="Watch Our Moments">
+  شاهد لقطاتنا
+</h2>
+    <div class="slider-container">
+      <div class="arrow arrow-left">&#10094;</div>
+      <div class="arrow arrow-right">&#10095;</div>
+      <div class="slider-track">
+        <div class="slider-item"><img src="img/ed5.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/ed8.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/ed10.jpg" alt="صورة تعليم 3"></div>
+        <div class="slider-item"><img src="img/ed14.jpg" alt="صورة تعليم 4"></div>
+         <div class="slider-item"><img src="img/ed12.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item center"><img src="img/ed6.jpg" alt="صورة تعليم 5"></div>
+         <div class="slider-item"><img src="img/ed5.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/ed7.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/ed2.jpg" alt="صورة تعليم 3"></div>
+         <div class="slider-item"><img src="img/ed3.jpg" alt="صورة تعليم 3"></div>
+          <div class="slider-item"><img src="img/ed4.jpg" alt="صورة تعليم 4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>         </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+</footer>
+
+<script>
+const track = document.querySelector('.slider-track');
+const items = Array.from(document.querySelectorAll('.slider-item'));
+const container = document.querySelector('.slider-container');
+
+let centerIndex = Math.floor(items.length / 2);
+
+function updateCenter() {
+  items.forEach(item => item.classList.remove('center'));
+  const centerItem = items[centerIndex];
+  centerItem.classList.add('center');
+
+  const containerRect = container.getBoundingClientRect();
+  const itemRect = centerItem.getBoundingClientRect();
+
+ 
+  let translateX = itemRect.left + itemRect.width/2 - (containerRect.left + containerRect.width/2);
+
+ 
+  const currentTransform = track.style.transform.match(/-?\d+\.?\d*/);
+  const currentTranslate = currentTransform ? parseFloat(currentTransform[0]) : 0;
+  track.style.transform = `translateX(${currentTranslate - translateX}px)`;
+}
+
+
+updateCenter();
+
+// الأسهم
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  if(centerIndex > 0) {
+    centerIndex--;
+    updateCenter();
+  }
+});
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  if(centerIndex < items.length - 1) {
+    centerIndex++;
+    updateCenter();
+  }
+});
+
+</script>
+<script>
+let currentLang = "ar";
+function toggleLanguage() {
+ const currentLang = "en"; 
+
+document.querySelector('.footer-subtitle').innerHTML = 
+    document.querySelector('.footer-subtitle').getAttribute(`data-${currentLang}`);
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+}
+
+const translations = {
+  ar: {
+    homeText: "الرئيسية",
+    programText: "البرامج",
+    educationText: "التعليم",
+    sectionTitle: "التعليم",
+    programSubtitle: "التعليم حق أساسي لكل طفل رغم الأزمات",
+    ideaTitle: "الأهداف",
+    outputTitle: "المخرجات",
+    activitiesTitle: "الأنشطة",
+    recommendationsTitle: "التوصيات",
+    idealist: [
+      "ضمان استمرارية التعليم للأطفال المتأثرين بالحرب.",
+      "تقليل الفاقد التعليمي الناتج عن تدمير المدارس والانقطاع.",
+      "توفير بيئة تعليمية آمنة مدعومة نفسياً وتقنياً.",
+      "تعزيز الصحة النفسية للطلاب من خلال أنشطة الدعم والإغاثة.",
+      "رفع الوعي بين الطلاب وأسرهم بأهمية التعليم في الأزمات."
+    ],
+    outputlist: [
+      "تمكين عدد من الأطفال من العودة إلى بيئة تعليمية آمنة ومجهزة.",
+      "تحسين التحصيل الأكاديمي للطلاب المستفيدين من الدروس الخصوصية.",
+      "تعزيز فرص نجاح طلاب المرحلة الثانوية في امتحاناتهم.",
+      "تقديم دعم نفسي فعال للطلاب من خلال أنشطة ترفيهية مخصصة.",
+      "زيادة وعي الأسر بأهمية التعليم وكيفية دعمه أثناء الأزمات.",
+      "تعزيز التنسيق مع المؤسسات التعليمية لضمان استمرارية وتأثير البرنامج.",
+      "تسليط الضوء على القضايا التعليمية الأساسية."
+    ],
+    activitieslist: [
+      "إنشاء فضاءات تعليمية آمنة مجهزة بالكهرباء والإنترنت.",
+      "تقديم دروس خصوصية لدعم التحصيل الأكاديمي.",
+      "استهداف طلاب المرحلة الثانوية بدعم مكثف ومتخصص.",
+      "تنفيذ أنشطة ترفيهية لتعزيز الصحة النفسية للطلاب.",
+      "عقد جلسات توعية للطلاب وأسرهم بأهمية التعليم.",
+      "بناء شراكات مع المؤسسات التعليمية لضمان استمرارية البرنامج.",
+      "إطلاق حملات رقمية على وسائل التواصل لتعزيز صوت الطلاب ورفع وعي المجتمع."
+    ],
+    recommendationslist: [
+      "إنشاء فضاءات تعليمية آمنة ومجهزة بالكهرباء والإنترنت.",
+      "تقديم دروس خصوصية لدعم التحصيل الأكاديمي.",
+      "استهداف طلاب المرحلة الثانوية بدعم مكثف ومتخصص.",
+      "تنفيذ أنشطة ترفيهية لتعزيز الصحة النفسية للطلاب.",
+      "عقد جلسات توعية للطلاب وأسرهم بأهمية التعليم.",
+      "بناء شراكات مع المؤسسات التعليمية لضمان استمرارية البرنامج.",
+      "تشغيل حملات رقمية على وسائل التواصل لتعزيز صوت الطلاب ورفع وعي المجتمع."
+    ]
+  },
+  en: {
+    homeText: "Home",
+    programText: "Programs",
+    educationText: "Education",
+    sectionTitle: "Education",
+    programSubtitle: "Education is a basic right for every child despite crises",
+    ideaTitle: "Objectives",
+    outputTitle: "Outputs",
+    activitiesTitle: "Activities",
+    recommendationsTitle: "Recommendations",
+    idealist: [
+      "Ensuring the continuity of education for children affected by war.",
+      "Reducing the educational loss caused by the destruction of schools and interruptions.",
+      "Providing a safe educational environment supported psychologically and technologically.",
+      "Enhancing students' mental health through support and relief activities.",
+      "Raising awareness among students and their families about the importance of education in crises."
+    ],
+    outputlist: [
+      "Enabling a number of children to return to a safe and prepared educational environment.",
+      "Improving the academic achievement of students benefiting from private lessons.",
+      "Enhancing the chances of high school students to successfully pass their exams.",
+      "Providing effective psychological support for students through dedicated recreational activities.",
+      "Increasing families' awareness of the importance of education and how to support it during crises.",
+      "Strengthening coordination with educational institutions to ensure the continuity and impact of the program.",
+      "Highlighting key education issues."
+    ],
+    activitieslist: [
+      "Establishing safe educational spaces equipped with electricity and internet.",
+      "Providing private lessons to support academic achievement.",
+      "Targeting high school students with intensive and specialized support.",
+      "Implementing recreational activities to enhance students' mental health.",
+      "Holding awareness sessions for students and their families about the importance of education.",
+      "Building partnerships with educational institutions to ensure program continuity.",
+      "Launching digital campaigns on social media to amplify students' voices and raise community awareness about the importance of education."
+    ],
+    recommendationslist: [
+      "Creating safe and equipped educational spaces with electricity and internet.",
+      "Providing private tutoring to support academic achievement.",
+      "Targeting high school students with intensive and specialized support.",
+      "Implementing recreational activities to enhance students' mental well-being.",
+      "Conducting awareness sessions for students and their families on the importance of education.",
+      "Building partnerships with educational institutions to ensure program continuity.",
+      "Running digital campaigns on social media to amplify students' voices and raise community awareness about the importance of education."
+    ]
+  }
+};
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  const t = translations[currentLang];
+
+
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+
+  document.getElementById("section-title").textContent = t.sectionTitle;
+  document.getElementById("program-subtitle").textContent = t.programSubtitle;
+  document.getElementById("idea-title").textContent = t.ideaTitle;
+  document.getElementById("output-title").textContent = t.outputTitle;
+  document.getElementById("activities-title").textContent = t.activitiesTitle;
+  document.getElementById("recommendations-title").textContent = t.recommendationsTitle;
+
+ 
+  ["idea-list", "output-list", "activities-list", "recommendations-list"].forEach(id => {
+    const ul = document.getElementById(id);
+    if (ul) {
+      ul.innerHTML = "";
+      const listName = id.replace("-list","");
+      t[listName + "list"].forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  });
+
+  
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+  
+}
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
+</script>
+
+
+</body>
+</html>

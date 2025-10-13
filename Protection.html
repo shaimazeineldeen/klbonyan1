@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج الحماية - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+<script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+    
+.lang-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+ 
+  left: 80px; 
+}
+
+html[dir="ltr"] .lang-btn {
+  left: auto;  
+  right: 80px; 
+}
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+  </style>
+</head>
+<body>
+<header>
+  
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+   
+    <div class="header-center">
+      
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+                   <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="projects.html" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="sub-header">
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="Protection.html" class="home-link">
+    <i class="fas fa-book-open"></i>
+    <span id="program-text" data-ar="البرامج" data-en="Programs">البرامج</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="Protection.html" class="home-link">
+    <i class="fas fa-shield-alt"></i>
+    <span id="education-text" data-ar="الحماية" data-en="Protection">الحماية</span>
+  </a>
+</div>
+
+
+
+
+
+<div class="progra-image-wrapper">
+  <img src="img/يللا.jpg" alt="الإستجابة للطوارئ" class="program-image">
+  <video controls>
+          <source src="vid/SnapInsta.to_AQMifChaZbMZiWvOfCTCzDqoWzCBijJOsF7dmCGtRuQAOnINNw2BFVJ7fEjzY5V5jejl2Bos1_DWjF5hcboIbzAy6Gut8alNwKPWXBI.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+   <img src="img/pro11.jpg" alt="الإستجابة للطوارئ" class="program-image">  
+        
+      
+</div>
+
+<section class="program-section">
+  <h2 id="section-title" 
+      data-ar="الحماية" 
+      data-en="Protection">
+    الحماية
+  </h2>
+  <h3 class="program-subtitle" id="program-subtitle"
+      data-ar="يعمل كالبنيان على توفير استجابة شاملة لبرامج الحماية في ظل الحرب والنزاع، ضمن إطارين متكاملين: الأول هو الحماية من الاستغلال والاعتداء الجنسيين (PSEA)، والثاني يشمل التوعية بمخلفات الحرب والذخائر (ERW - UXO - MA)، بما يسهم في الحد من المخاطر وحماية الفئات الأكثر هشاشة. نسعى من خلال هذا التدخل إلى بناء بيئة آمنة تحفظ الكرامة والحقوق، وتضمن العدالة والحماية لكل فرد في المجتمع"
+      data-en="Kalbonyan provides a comprehensive response to protection programs amid war and conflict, within two integrated frameworks: first, protection from sexual exploitation and abuse (PSEA), second, awareness on war remnants and unexploded ordnance (ERW - UXO - MA), which helps reduce risks and protect the most vulnerable groups. Through this intervention, we aim to build a safe environment that preserves dignity and rights, ensuring justice and protection for every individual in the community.">
+يعمل كالبنيان على توفير استجابة شاملة لبرامج الحماية في ظل الحرب والنزاع، ضمن إطارين متكاملين: الأول هو الحماية من الاستغلال والاعتداء الجنسيين  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="idea-title" data-ar="الأهداف" data-en="Objectives">الأهداف</h4>
+  <h3 id="idea-list"
+      data-ar="تمكين كل فرد ليعيش بأمان وكرامة، عبر تعزيز الوعي، توفير الحماية الشاملة، والدعم النفسي والاجتماعي، لنرسم معًا طريق استقرار مجتمعي مستدام رغم تحديات الحرب والنزاع"
+      data-en="Empower every individual to live safely and with dignity by raising awareness, providing comprehensive protection, and offering psychological and social support, to collectively create a path toward sustainable community stability despite the challenges of war and conflict.">
+تمكين كل فرد ليعيش بأمان وكرامة، عبر تعزيز الوعي، توفير الحماية الشاملة، والدعم النفسي والاجتماعي، لنرسم معًا طريق استقرار مجتمعي مستدام رغم تحديات الحرب والنزاع  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="activities-title" data-ar="ماذا يقدم البرنامج؟" data-en="What the program provides?">ماذا يقدم البرنامج؟</h4>
+  <ul id="activities-list"
+      data-ar='
+        <li>توزيع مواد توعوية وإرشادية لتعزيز الوعي المجتمعي.</li>
+        <li>تنفيذ ورش عمل تثقيفية في مجال الحماية وحقوق الإنسان.</li>
+        <li>إنشاء منصات رقمية لاستقبال الشكاوى والتعامل معها بكفاءة.</li>
+        <li>إطلاق حملات توعوية رقمية لزيادة الانتشار والتأثير.</li>
+        <li>تقديم الدعم النفسي والاجتماعي للفئات المستهدفة.</li>
+        <li>توفير الدعم اللوجستي لتعزيز استجابة الحماية في الميدان.</li>'
+      data-en='
+        <li>Distribute awareness and guidance materials to enhance community awareness.</li>
+        <li>Conduct educational workshops on protection and human rights.</li>
+        <li>Create digital platforms for receiving and efficiently handling complaints.</li>
+        <li>Launch digital awareness campaigns to increase outreach and impact.</li>
+        <li>Provide psychological and social support to target groups.</li>
+        <li>Provide logistical support to strengthen field protection response.</li>'
+  >
+    <li>توزيع مواد توعوية وإرشادية لتعزيز الوعي المجتمعي.</li>
+    <li>تنفيذ ورش عمل تثقيفية في مجال الحماية وحقوق الإنسان.</li>
+    <li>إنشاء منصات رقمية لاستقبال الشكاوى والتعامل معها بكفاءة.</li>
+    <li>إطلاق حملات توعوية رقمية لزيادة الانتشار والتأثير.</li>
+    <li>تقديم الدعم النفسي والاجتماعي للفئات المستهدفة.</li>
+    <li>توفير الدعم اللوجستي لتعزيز استجابة الحماية في الميدان.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="output-title" data-ar="المخرجات" data-en="Outputs">المخرجات</h4>
+  <h3 id="output-list"
+      data-ar="تتجسد في مجتمع أكثر وعيًا وحماية، حيث أصبحت منصات الشكاوى نافذة للأمان، والدعم النفسي يجدد الأمل، وحملات التوعية تزرع ثقافة العدالة والمساواة، ليكون كل فرد محميًا ومستحقًا للكرامة تحت ظل السلام والأمان."
+      data-en="Reflected in a more aware and protected community, where complaint platforms become windows of safety, psychological support renews hope, and awareness campaigns instill a culture of justice and equality, ensuring every individual is protected and entitled to dignity under peace and safety.">
+تتجسد في مجتمع أكثر وعيًا وحماية، حيث أصبحت منصات الشكاوى نافذة للأمان، والدعم النفسي يجدد الأمل، وحملات التوعية تزرع ثقافة العدالة والمساواة، ليكون كل فرد محميًا ومستحقًا للكرامة تحت ظل السلام والأمان  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="recommendations-title" data-ar="التوصيات" data-en="Recommendations">التوصيات</h4>
+  <h3 id="recommendations-list"
+      data-ar="تركز على تعزيز آليات الحماية المستدامة، وتوسيع نطاق التوعية والدعم النفسي، وضمان استجابة فعالة لجميع الشكاوى، مع بناء شراكات قوية تضمن استمرارية البرامج، لنرسم معًا طريقًا نحو مجتمع أكثر أمانًا وعدالة لكل أبنائه."
+      data-en="Focus on strengthening sustainable protection mechanisms, expanding awareness and psychological support, ensuring effective response to all complaints, and building strong partnerships to ensure program continuity, collectively paving the way toward a safer and more just society for all its members.">
+تركز على تعزيز آليات الحماية المستدامة، وتوسيع نطاق التوعية والدعم النفسي، وضمان استجابة فعالة لجميع الشكاوى، مع بناء شراكات قوية تضمن استمرارية البرامج، لنرسم معًا طريقًا نحو مجتمع أكثر أمانًا وعدالة لكل أبنائه  </h3>
+</section>
+
+<section class="slider-section">
+  <div class="slider-wrapper">
+<h2 class="slider-title" 
+    data-ar="شاهد لقطاتنا" 
+    data-en="Watch Our Moments">
+  شاهد لقطاتنا
+</h2>
+    <div class="slider-container">
+      <div class="arrow arrow-left">&#10094;</div>
+      <div class="arrow arrow-right">&#10095;</div>
+      <div class="slider-track">
+                    <div class="slider-item"><img src="img/pro20.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/pro21.jpg" alt="صورة تعليم 1"></div>
+
+            <div class="slider-item"><img src="img/pro22.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/pro23.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/pro24.jpg" alt="صورة تعليم 2"></div>
+
+       
+        <div class="slider-item"><img src="img/pro15.jpg" alt="صورة تعليم 3"></div>
+        <div class="slider-item"><img src="img/pro4.jpg" alt="صورة تعليم 4"></div>
+         <div class="slider-item"><img src="img/pro5.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item center"><img src="img/pro19.jpg" alt="صورة تعليم 5"></div>
+         <div class="slider-item"><img src="img/pro6.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/pro7.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/pro8.jpg" alt="صورة تعليم 3"></div>
+         <div class="slider-item"><img src="img/pr9.jpg" alt="صورة تعليم 3"></div>
+          <div class="slider-item"><img src="img/pro13.jpg" alt="صورة تعليم 4"></div>
+          <div class="slider-item"><img src="img/pro10.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/pro14.jpg" alt="صورة تعليم 2"></div>
+            <div class="slider-item"><img src="img/pro17.jpg" alt="صورة تعليم 2"></div>
+            
+
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+ <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+</footer>
+<script>
+const track = document.querySelector('.slider-track');
+const items = Array.from(document.querySelectorAll('.slider-item'));
+const container = document.querySelector('.slider-container');
+
+let centerIndex = Math.floor(items.length / 2);
+
+function updateCenter() {
+  items.forEach(item => item.classList.remove('center'));
+  const centerItem = items[centerIndex];
+  centerItem.classList.add('center');
+
+  const containerRect = container.getBoundingClientRect();
+  const itemRect = centerItem.getBoundingClientRect();
+
+  
+  let translateX = itemRect.left + itemRect.width/2 - (containerRect.left + containerRect.width/2);
+
+ 
+  const currentTransform = track.style.transform.match(/-?\d+\.?\d*/);
+  const currentTranslate = currentTransform ? parseFloat(currentTransform[0]) : 0;
+  track.style.transform = `translateX(${currentTranslate - translateX}px)`;
+}
+
+
+updateCenter();
+
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  if(centerIndex > 0) {
+    centerIndex--;
+    updateCenter();
+  }
+});
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  if(centerIndex < items.length - 1) {
+    centerIndex++;
+    updateCenter();
+  }
+});
+
+</script>
+<script>
+let currentLang = "ar";
+
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  const t = translations[currentLang];
+
+
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+
+  document.getElementById("section-title").textContent = t.sectionTitle;
+  document.getElementById("program-subtitle").textContent = t.programSubtitle;
+  document.getElementById("idea-title").textContent = t.ideaTitle;
+  document.getElementById("output-title").textContent = t.outputTitle;
+  document.getElementById("activities-title").textContent = t.activitiesTitle;
+  document.getElementById("recommendations-title").textContent = t.recommendationsTitle;
+
+  
+  ["idea-list", "output-list", "activities-list", "recommendations-list"].forEach(id => {
+    const ul = document.getElementById(id);
+    if (ul) {
+      ul.innerHTML = "";
+      const listName = id.replace("-list","");
+      t[listName + "list"].forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  });
+
+  
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+  
+}
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+
+</body>
+</html>

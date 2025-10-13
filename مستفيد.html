@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج التعليم - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+<script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+   .lang-btn {
+  position: absolute;
+  left: 80px;    
+  top: 50%;
+  transform: translateY(-50%); 
+  
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+  </style>
+</head>
+<body>
+ <header>
+  
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+      
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+              
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+        
+           <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+         
+       
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="sub-header">
+ <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="مستفيد.html" class="home-link">
+    <i class="fas fa-comments"></i>
+    <span id="program-text" data-ar="الآراء" data-en="Opinions">الآراء</span>
+  </a>
+ 
+</div>
+
+
+
+
+</div>
+
+<h2 data-ar="آراء المستفيدين" data-en="Beneficiaries' Testimonials" class="section-title">
+  آراء المستفيدين
+</h2>
+
+<section class="testimonial-section">
+  <div class="testimonial-container">
+    <div class="testimonial-text">
+      <h3 data-ar="نسمة زعرب" data-en="Nesma Zaarab">نسمة زعرب</h3>
+      <p data-ar="أنا الطفلة نسمة زعرب ، عمري 12 سنة، من غزة... قبل ما أجي على مساحة كالبنيان، كنت ما بعرف ادرس وما في كهربا ولا إنترنت، وكل شي كان صعب، حتى الدفاتر ما كانت موجودة لما دخلت المساحة، حسّيت كإني رجعت طالبة من جديد... في مكان دافي، وفي إنترنت، وفي أستاذ بيشرحلي، وفي ناس بتعاملني بمحبة وكتتتير نبسطت من الالعاب والحجات صحيح الحرب أخدت كتير، بس كالبنيان رجّعتلي شوي من حقي بالتعليم والحياة. " 
+         data-en="I am Nesma Zaarab, 12 years old, from Gaza... Before I came to the Kalbonyan space, I didn’t know how to study and there was no electricity or internet, and everything was difficult—even notebooks were missing. When I entered the space, I felt like I became a student again… in a warm place, with internet, a teacher explaining things to me, and people treating me with love. I really enjoyed the games and activities. Although the war took a lot from us, Kalbonyan restored some of my right to education and life.">أنا الطفلة نسمة زعرب ، عمري 12 سنة، من غزة... قبل ما أجي على مساحة كالبنيان، كنت ما بعرف ادرس وما في كهربا ولا إنترنت، وكل شي كان صعب، حتى الدفاتر ما كانت موجودة لما دخلت المساحة، حسّيت كإني رجعت طالبة من جديد... في مكان دافي، وفي إنترنت، وفي أستاذ بيشرحلي، وفي ناس بتعاملني بمحبة وكتتتير نبسطت من الالعاب والحجات صحيح الحرب أخدت كتير، بس كالبنيان رجّعتلي شوي من حقي بالتعليم والحياة.</p>
+    </div>
+    <div class="testimonial-video">
+  <video controls>
+    <source src="vid/نحن فخورين جداً في الطالبة نسمة زعرب أحد المستفيدات من أنشطة فريق كالبنيان التي تمتلك مهارات رائ.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+</div>
+
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="testimonial-container">
+    <div class="testimonial-photot">
+     <img src="img/احمد.jpg" alt="محمد" >
+    </div>
+    <div class="testimonial-text">
+      <h3 data-ar="أحمد" data-en="Ahmed">أحمد</h3>
+      <p data-ar="كنت اسال حالي ، متى هصير اشعر انو صوتي واصل للمجتمع ؟ 
+معكم أحمد ، سكان مدينة غزة ، عشت صعوبات كبيرة بسبب الحرب والبطالة، كنت أشعر أن صوتي ضائع وسط الأزمة لكن من خلال كالبنيان، تعلمت كيف أشارك في صنع القرار، وكيف أصنع فرقًا حقيقيًا في مجتمعي رغم قلة الموارد والمعاناة الكبيرة، كانت الفرصة الي منحتني إياها كالبنيان نقطة تحول، لأصبح قائدًا يساهم في بناء مستقبل أفضل لنا جميعًا ، والان انا اقود مجموعة شبابية لمناصرة عدة قضايا اساسية في المجتمع (شكرا كالبنيان ، بل المجتمع كله لازم يحكي لكالبنيان شكرا)" 
+         data-en= "I used to ask myself, “When will I feel that my voice reaches the community?”
+I am Ahmed, a resident of Gaza City. I faced many difficulties due to the war and unemployment. I felt that my voice was lost amid the crisis, but through Kalbonyan, I learned how to participate in decision-making and how to make a real difference in my community despite the limited resources and great suffering. The opportunity Kalbonyan gave me was a turning point, allowing me to become a leader contributing to a better future for all of us. Now, I lead a youth group advocating for several key issues in the community (Thanks to Kalbonyan—actually, the whole community should say thank you to Kalbonyan).">كنت اسال حالي ، متى هصير اشعر انو صوتي واصل للمجتمع ؟ 
+معكم محمد ، سكان مدينة غزة ، عشت صعوبات كبيرة بسبب الحرب والبطالة، كنت أشعر أن صوتي ضائع وسط الأزمة لكن من خلال كالبنيان، تعلمت كيف أشارك في صنع القرار، وكيف أصنع فرقًا حقيقيًا في مجتمعي رغم قلة الموارد والمعاناة الكبيرة، كانت الفرصة الي منحتني إياها كالبنيان نقطة تحول، لأصبح قائدًا يساهم في بناء مستقبل أفضل لنا جميعًا ، والان انا اقود مجموعة شبابية لمناصرة عدة قضايا اساسية في المجتمع (شكرا كالبنيان ، بل المجتمع كله لازم يحكي لكالبنيان شكرا)</p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="testimonial-container">
+    <div class="testimonial-text">
+      <h3 data-ar=" الحاجة إم محمد" data-en="Em Muhammad"> الحاجة إم محمد</h3>
+      <p data-ar="أنا الحاجة ام محمد ، تصاوبت اكتر من مرة وطلعت من تحت الركام ، الحرب كسرت جسدي وروحي وخربت صحتي ، وما كان عندي مكان ألقى فيه علاج مناسب أو دواء لما وصلت نقطة حياة الطبية، حسيت بأني مش لحالي، وفي حد يهتم لوجعي وصوتي  من الاستشارة الطبية للفحوصات الطبية، إلى الأدوية، والاهتمام النفسي، كل شيء ساعدني أتحمل الألم وأتجاوز الصعاب رغم قلة الإمكانيات، كانت نقطة حياة شمس وسط ظلمة كبيرة، أعادت لي الأمل والحياة." 
+         data-en="I am Um Muhammad. I was injured multiple times and emerged from under the rubble. The war broke my body and spirit and damaged my health, and I had nowhere to find proper treatment or medicine. When I reached Hayah Medical Point, I felt that I was not alone and that someone cared about my pain and my voice. From medical consultations and examinations to medications and psychological support, everything helped me endure the pain and defeated the difficulties despite the limited resources. Nuqtat Hayah was like a ray of sunshine in a great darkness, restoring hope and life to me.">أنا الحاجة ام محمد ، تصاوبت اكتر من مرة وطلعت من تحت الركام ، الحرب كسرت جسدي وروحي وخربت صحتي ، وما كان عندي مكان ألقى فيه علاج مناسب أو دواء لما وصلت نقطة حياة الطبية، حسيت بأني مش لحالي، وفي حد يهتم لوجعي وصوتي  من الاستشارة الطبية للفحوصات الطبية، إلى الأدوية، والاهتمام النفسي، كل شيء ساعدني أتحمل الألم وأتجاوز الصعاب رغم قلة الإمكانيات، كانت نقطة حياة شمس وسط ظلمة كبيرة، أعادت لي الأمل والحياة.</p>
+    </div>
+    <div class="testimonial-photot">
+      <img src="img/الحجة.jpg" alt="محمد">
+    </div>
+  </div>
+</section>
+
+<style>
+  
+
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 30px 10px;
+  font-weight: bold;
+}
+
+
+.testimonial-section {
+  padding: 40px 10px;
+  background: linear-gradient(135deg, #f2ece1, #edece3);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+}
+
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: nowrap; 
+  background: linear-gradient(135deg, #fff8f0, #ffe6c7);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.testimonial-text,
+.testimonial-video {
+  flex: 1 1 45%;
+}
+
+
+.testimonial-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+.testimonial-text {
+  flex: 1 1 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.testimonial-text h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.testimonial-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.testimonial-video {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.testimonial-video iframe,
+.testimonial-video video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 480px) {
+  .testimonial-section {
+    padding: 20px 5px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin: 20px 5px;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .testimonial-text {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .testimonial-text h3 {
+    font-size: 20px;
+  }
+
+  .testimonial-text p {
+    font-size: 14px;
+  }
+
+  .testimonial-video iframe,
+  .testimonial-video video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .lang-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+.testimonial-photot {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.testimonial-photot img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;               
+  object-fit: contain;        
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background-color: #fff;      
+  padding: 5px;                
+  transition: transform 0.3s ease;
+}
+
+.testimonial-photot:hover img {
+  transform: scale(1.03);
+}
+
+
+@media (max-width: 480px) {
+  .testimonial-photot img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 300px; 
+}
+
+
+.testimonial-photot,
+.testimonial-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-text,
+  .testimonial-photot,
+  .testimonial-video {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+}
+
+</style>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+</footer>
+
+<script>
+let currentLang = "ar";
+function toggleLanguage() {
+ const currentLang = "en"; 
+
+document.querySelector('.footer-subtitle').innerHTML = 
+    document.querySelector('.footer-subtitle').getAttribute(`data-${currentLang}`);
+
+
+
+
+
+
+  
+
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+}
+
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  const t = translations[currentLang];
+
+  
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+  
+  document.getElementById("section-title").textContent = t.sectionTitle;
+  document.getElementById("program-subtitle").textContent = t.programSubtitle;
+  document.getElementById("idea-title").textContent = t.ideaTitle;
+  document.getElementById("output-title").textContent = t.outputTitle;
+  document.getElementById("activities-title").textContent = t.activitiesTitle;
+  document.getElementById("recommendations-title").textContent = t.recommendationsTitle;
+
+  
+  ["idea-list", "output-list", "activities-list", "recommendations-list"].forEach(id => {
+    const ul = document.getElementById(id);
+    if (ul) {
+      ul.innerHTML = "";
+      const listName = id.replace("-list","");
+      t[listName + "list"].forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  });
+
+  
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+  
+}
+
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+
+  
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+
+  
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+}
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+
+</body>
+</html>

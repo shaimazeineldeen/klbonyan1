@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>كالبنيان</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="volunteer.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script src="script.js" defer></script>
+   
+  
+</head>
+<body>
+  
+
+  
+ <header>
+
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+      
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="#partners" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+                   <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="#Contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<a href="" class="donate-float-btn" data-ar="تبرع الآن" data-en="Donate Now">
+  <i class="fas fa-heart"></i>
+  <span class="btn-text" data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</span>
+</a>
+
+
+ 
+<section class="hero-section">
+  <div class="header-text" 
+     data-ar="نرفع أعمدة الحلم<br>على أرض العزيمة" 
+     data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم<br>على أرض العزيمة
+
+  
+</div>
+
+  <div class="donate-container">
+    <a href="" class="donate-btn" data-ar="تبرع الآن" data-en="Donate Now">
+      تبرع الآن
+    </a>
+  </div>
+</section>
+
+
+
+<section class="team-section">
+  <h2 data-ar="فريقنا التنفيذي" data-en="Our Executive Team">
+    فريقنا التنفيذي
+    <span class="line"></span>
+  </h2>
+  <div class="team-container">
+
+   
+    <div class="team-card">
+      <div class="team-img">
+        <img src="img/ضياء.jpg" alt="Admin 1">
+      </div>
+      <div class="team-info">
+        <h3 data-ar="ضياء أبو عصر" data-en="Diaa Abu Aser"> ضياء أبو عصر</h3>
+        <p data-ar="مدير عام" data-en="Director General">مدير عام</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/diaa.hasan.179145" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/diaa.hasan.11/" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    
+   
+
+    
+    <div class="team-card">
+      <div class="team-img">
+        <img src="img/حمزة.jpg" alt="Admin 3">
+      </div>
+      <div class="team-info">
+        <h3 data-ar="حمزة الحواجري" data-en="Hamza Al-Hawajri">حمزة الحواجري</h3>
+        <p data-ar="مستشار مالي" data-en="Financial Advisor">مستشار مالي</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1DFtAnCwtY/" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/mr.dastan_?igsh=MTJ0cXR3ZTZkYXl3bw==" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+     <div class="team-card">
+      <div class="team-img">
+        <img src="img/علاء.jpg" alt="Admin 2">
+      </div>
+      <div class="team-info">
+        <h3 data-ar=" علاء أبو عصر" data-en="Alaa Abu Aser"> علاء أبو عصر</h3>
+        <p data-ar="مدير مالي" data-en="Finance Manager">مدير مالي</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1Fx27tTrbm/" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ala2gaza?igsh=MXB5M2QyYjNqeGIyMw==" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+<div class="team-card">
+      <div class="team-img">
+        <img src="img/شيماء.jpg" alt="Admin 1">
+      </div>
+      <div class="team-info">
+        <h3 data-ar="شيماء زين الدين" data-en="Shaima Zeineldeen">شيماء زين الدين</h3>
+        <p data-ar="مطور ويب" data-en="Web Developer">مطور ويب</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/shaima.zeineldeen.5" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/shaima_zeineldeen/" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="team-card">
+      <div class="team-img">
+        <img src="img/اسيل.jpg" alt="Admin 2">
+      </div>
+      <div class="team-info">
+        <h3 data-ar=" أسيل الغول" data-en="Aseel Alghoul"> أسيل الغول</h3>
+        <p data-ar="منسق برامج" data-en="Program Coordinator">منسق برامج</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/aseel.alghoul.121" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/asil.alghoul/" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="team-card">
+      <div class="team-img">
+        <img src="img/صهيب6.jpg" alt="Admin 3">
+      </div>
+      <div class="team-info">
+        <h3 data-ar="صهيب زين الدين" data-en="Suhaib Zeineldeen">صهيب زين الدين</h3>
+        <p data-ar="مدير إعلامي" data-en="Media Director">مدير إعلامي</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Suhaib.zeenAldeen" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/suhaib_zeenaldeen/" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="partners-section" id="partners">
+  <h2 data-ar="شركاؤنا في النجاح" data-en="Partners">
+    الشركاء
+    <span class="line"></span>
+  </h2>
+  <div class="partners-slider">
+    <div class="partners-track">
+      <div class="partner-logo">
+        <a href="https://graduates74.net" target="_blank">
+          <img src="img/خريجات.jpg" alt="Partner 1">
+        </a>
+      </div>
+      <div class="partner-logo">
+        <a href="https://elbaraka.org" target="_blank">
+          <img src="img/البركة.png" alt="Partner 2">
+        </a>
+      </div>
+      <div class="partner-logo">
+        <a href="https://www.maan-ctr.org" target="_blank">
+          <img src="img/مركز العمل التنموي معاً.jpg" alt="Partner 3">
+        </a>
+      </div>
+      <div class="partner-logo">
+        <a href="https://shabakatsanad.com" target="_blank">
+          <img src="img/سند.png" alt="Partner 4">
+        </a>
+      </div>
+       <div class="partner-logo">
+        <a href="https://www.mohe.pna.ps" target="_blank">
+          <img src="img/التعليم.png" alt="Partner 4">
+        </a>
+      </div>
+       <div class="partner-logo">
+        <a href="https://palestine.actionaid.org" target="_blank">
+          <img src="img/اكشن.png" alt="Partner 4">
+        </a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+<section class="stories-section" style="background: linear-gradient(135deg, #ece5d8, #f7f4f0); padding: 60px 20px; border-radius: 20px;">
+  
+  <h2 style="text-align:center; font-size:32px; margin-bottom:50px; color:#333;"
+      data-ar="قصص النجاح" data-en="Success Stories">
+    قصص النجاح
+  </h2>
+
+  
+  <div class="story-container">
+   
+    <div class="story active">
+      <div class="story-text">
+        <h2 data-ar="د.فطوم أبو عقلين" data-en="Dr. Fatouma Abu Aqleen">د.فطوم أبو عقلين</h2>
+        <p data-ar="من التدريب إلى العمل الميداني
+
+في قلب الظروف الصعبة التي يمر بها قطاع غزة، لم تتوقف الدكتورة فطومة أبو عقلين عن حمل رسالتها الطبية والإنسانية. بكل فخر، كانت واحدة من الشابات المشاركات في تدريب الإسعافات الأولية والإسعاف النفسي الأولي، الذي نفذه كالبنيان بالشراكة مع جمعية الخريجات وبرنامج الأمم المتحدة الإنمائي UNDP.
+لم يكن التدريب مجرد ايام عابرة، بل كان بوابة عبور نحو العمل الميداني الحقيقي. فبعد اجتيازها للتدريب بنجاح، أصبحت فطومة واحدة من الطبيبات العاملات في نقطة حياة الطبية التابعة لكالبنيان ، حيث تقدم خدماتها للمحتاجين، حاملةً في قلبها شغف المهنة وفي يديها أدوات الإنقاذ.
+فطومة ليست فقط طبيبة ، إنها قصة إصرار، نموذج للتمكين، وصوت يؤمن أن  النساء قادرة."
+           data-en="From training to fieldwork
+
+In the heart of the difficult circumstances in Gaza, Dr. Fatouma Abu Aqleen never stopped carrying her medical and humanitarian mission. Proudly, she was one of the young women participating in the first aid and psychological first aid training conducted by Kalbanyan in partnership with the Graduates Association and UNDP.
+The training wasn't a simple jurny just a few days; it was a gateway to real fieldwork. After successfully completing the training, Fatouma became one of the doctors working at Kalbanyan's Hayat Medical Point, providing services to those in need, carrying passion in her heart and life-saving tools in her hands.
+Fatouma is not only a doctor; she is a story of determination, a model of empowerment, and a voice that believes women are capable.">
+          من التدريب إلى العمل الميداني
+
+في قلب الظروف الصعبة التي يمر بها قطاع غزة، لم تتوقف الدكتورة فطومة أبو عقلين عن حمل رسالتها الطبية والإنسانية. بكل فخر، كانت واحدة من الشابات المشاركات في تدريب الإسعافات الأولية والإسعاف النفسي الأولي، الذي نفذه كالبنيان بالشراكة مع جمعية الخريجات وبرنامج الأمم المتحدة الإنمائي UNDP.
+لم يكن التدريب مجرد ايام عابرة، بل كان بوابة عبور نحو العمل الميداني الحقيقي. فبعد اجتيازها للتدريب بنجاح، أصبحت فطومة واحدة من الطبيبات العاملات في نقطة حياة الطبية التابعة لكالبنيان ، حيث تقدم خدماتها للمحتاجين، حاملةً في قلبها شغف المهنة وفي يديها أدوات الإنقاذ.
+فطومة ليست فقط طبيبة ، إنها قصة إصرار، نموذج للتمكين، وصوت يؤمن أن  النساء قادرة.
+        </p>
+      </div>
+      <div class="story-media">
+        <video controls>
+          <source src="vid/WhatsApp Video 2025-10-05 at 10.29.34 AM.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+    </div>
+
+    
+    <div class="story reverse">
+      <div class="story-text">
+        <h2 data-ar="وعد الزعانين" data-en="Waad Al-Zaanin">وعد الزعانين</h2>
+        <p data-ar="من التهميش إلى صوت يزرع الوعي
+
+وعد الزعانين، طفلة من ذوي الإعاقة، من سكان بيت حانون ، إحدى أكثر المناطق تضررًا في قطاع غزة بفعل الحرب وبقايا الذخائر. كانت تعيش في بيئة قاسية محفوفة بالمخاطر، حيث تكثر مخلفات الحرب التي تهدد حياة الأطفال بشكل يومي.
+رغم الظروف، لم تُطفأ في وعد رغبة التعلّم. ومن هنا جاء تدخل كالبنيان بالشراكة مع مركز العمل التنموي معًا، ليوفر لها بيئة تعليمية تراعي احتياجاتها الخاصة، وتُمكّنها من التعلم بأمان وكرامة.
+لم تكن وعد مجرّد مستفيدة من البرنامج، بل أصبحت نموذجًا مُلهمًا بين الأقران. تعلّمت، وتقدّمت، وبدأت بدورها في نشر التوعية بين الأطفال، محذّرةً بلغة بريئة وواعية:  
+'ابتعدوا عن الأجسام المشبوهة... بدي من العالم كله يشيل الصوا.ريخ'
+وعد ليست فقط طفلة تعلمت، بل هي صوت يُجسّد أن التمكين يبدأ من الإيمان بقدرة الإنسان، مهما كان صغيرًا أو مختلفًا."
+           data-en="From marginalization to a voice raising awareness
+
+Waad Al-Zaanin, a child with disabilities from Beit Hanoun, one of the most affected areas in Gaza due to war remnants. She lived in a harsh environment full of risks, with war debris threatening children's lives daily.
+Despite the circumstances, Waad's desire to learn was never extinguished. Kalbanyan, in partnership with Ma'an Development Center, provided her a safe educational environment adapted to her needs.
+Waad was not just a beneficiary of the program; she became an inspiring model among her peers. She learned, progressed, and began raising awareness among children, warning in an innocent and conscious language:  
+'Stay away from suspicious objects... I want the world to remove the rockets.'
+Waad is not just a child who learned; she is a voice showing that empowerment starts with believing in human potential, no matter how small or different.">
+          من التهميش إلى صوت يزرع الوعي
+
+وعد الزعانين، طفلة من ذوي الإعاقة، من سكان بيت حانون ، إحدى أكثر المناطق تضررًا في قطاع غزة بفعل الحرب وبقايا الذخائر. كانت تعيش في بيئة قاسية محفوفة بالمخاطر، حيث تكثر مخلفات الحرب التي تهدد حياة الأطفال بشكل يومي.
+رغم الظروف، لم تُطفأ في وعد رغبة التعلّم. ومن هنا جاء تدخل كالبنيان بالشراكة مع مركز العمل التنموي معًا، ليوفر لها بيئة تعليمية تراعي احتياجاتها الخاصة، وتُمكّنها من التعلم بأمان وكرامة.
+لم تكن وعد مجرّد مستفيدة من البرنامج، بل أصبحت نموذجًا مُلهمًا بين الأقران. تعلّمت، وتقدّمت، وبدأت بدورها في نشر التوعية بين الأطفال، محذّرةً بلغة بريئة وواعية:  
+'ابتعدوا عن الأجسام المشبوهة... بدي من العالم كله يشيل الصوا.ريخ'
+وعد ليست فقط طفلة تعلمت، بل هي صوت يُجسّد أن التمكين يبدأ من الإيمان بقدرة الإنسان، مهما كان صغيرًا أو مختلفًا.
+        </p>
+      </div>
+      <div class="story-media">
+        <video controls>
+          <source src="vid/WhatsApp Video 2025-10-05 at 10.29.39 AM.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+      </div>
+    </div>
+   
+<div class="story">
+  <div class="story-text">
+    <h2 data-ar="زهرة" data-en="Zahra">زهرة</h2>
+    <p data-ar="أنا زهرة، الأولى على قطاع غزة في التوجيهي ورا هالإنجاز في حكاية صمود مش سهلة كنت أدرس والقصف حواليا، والخوف والقلق ما فارقوني أوقات كثيرة بكيت، حسّيت باليأس، بس حلمي ما تركني، وإيماني بنفسي كان أقوى من كل الحرب والحرمان  
+رغم كل الظروف الاقتصادية الصعبة، ما استسلمت ووصلت لهدفي، وصوت النجاح جوّاتي غلب صوت القصف.  
+كالبنيان آمنت فيّ، وخلّت قصتي توصل، وفتحتلي المجال أشارك تجربتي مع طلاب تانيين يمكن محتاجين أمل.  
+رسالتي لكل حدا بيحاول:  
+من تحت الركام، في حلم... ومن قلب الحرب، بيطلع نور. ما في مستحيل." data-en="I am Zahra, the top student in Gaza in the Tawjihi exams Behind this achievement lies a story of resilience that was not easy I used to study while the bombing was happening around me, and fear and anxiety never left me Many times I cried, felt despair, but my dream never left me, and my faith in myself was stronger than all the war and deprivation.
+
+Despite all the difficult economic circumstances, I did not give up. I reached my goal, and the sound of success inside me defeated the sound of the bombing.
+
+Klbonyan believed in me, let my story be heard, and gave me the opportunity to share my experience with other students who might need hope.
+
+My message to anyone trying:
+From beneath the rubble, there is a dream… and from the heart of war, a light emerges. Nothing is impossible.">أنا زهرة، الأولى على قطاع غزة في التوجيهي ورا هالإنجاز في حكاية صمود مش سهلة كنت أدرس والقصف حواليا، والخوف والقلق ما فارقوني أوقات كثيرة بكيت، حسّيت باليأس، بس حلمي ما تركني، وإيماني بنفسي كان أقوى من كل الحرب والحرمان  
+رغم كل الظروف الاقتصادية الصعبة، ما استسلمت ووصلت لهدفي، وصوت النجاح جوّاتي غلب صوت القصف.  
+كالبنيان آمنت فيّ، وخلّت قصتي توصل، وفتحتلي المجال أشارك تجربتي مع طلاب تانيين يمكن محتاجين أمل.  
+رسالتي لكل حدا بيحاول:  
+من تحت الركام، في حلم... ومن قلب الحرب، بيطلع نور. ما في مستحيل.
+من تحت الركام، في حلم... ومن قلب الحرب، بيطلع نور. ما في مستحيل.</p>
+  </div>
+  <div class="story-media">
+    <img src="img/زهرة.jpg" alt="الإستجابة للطوارئ" class="program-image">  
+  </div>
+</div>
+
+  </div>
+
+
+
+<div style="text-align:center; margin-top: 30px;">
+  <button id="switch-btn" 
+          data-ar="القصة التالية" 
+          data-en="Next Story"
+          style="
+            padding: 14px 30px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+            border-radius: 12px;
+            background-color:#F0CC8E; /* لون أصفر ساطع */
+            color:black; /* نص أسود واضح */
+            border: 2px solid black; /* إطار برتقالي داكن */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4); /* ظل واضح */
+            transition: all 0.3s ease;
+          ">
+           <i class="fas fa-arrow-right"></i>
+    القصة التالية
+  </button>
+</div>
+</section>
+<style>
+#switch-btn:hover {
+  background-color:black; 
+  transform: scale(1.1); 
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5); 
+}
+
+#switch-btn:active {
+  transform: scale(0.95); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+</style>
+
+</section>
+
+<style>
+.stories-section {
+  max-width: 1200px;
+  margin: 30px auto;       
+  display: flex;
+  flex-direction: column;
+  gap: 30px;               
+  padding: 20px 40px;     
+}
+
+.stories-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;    
+  color: #333;
+}
+
+.story-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.story.active {
+  opacity: 1;
+  position: relative;
+}
+
+.story.reverse {
+  flex-direction: row-reverse;
+}
+
+.story-text {
+  flex: 1;
+  text-align: left;
+}
+
+.story-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center; /* يوسّط النص */
+}
+.story-media {
+  flex: 0 0 auto;       
+  max-width: 250px;     /* عرض أصغر */
+  width: 100%;          
+  margin: 0 auto;       
+}
+
+.story-media video {
+  width: 100%;          
+  max-height: 300px;    /* تقليل الطول */
+  border-radius: 8px;   
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  object-fit: cover;    /* يملأ الإطار بدون تشويه */
+}
+
+/* للجوال: الفيديو أولًا ثم النص */
+@media (max-width: 768px) {
+  .story, .story.reverse {
+    display: flex;
+    flex-direction: column; /* عمودي */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .story.reverse .story-text {
+    order: 2; /* النص يأتي بعد الفيديو */
+  }
+
+  .story.reverse .story-media {
+    order: 1; /* الفيديو يأتي أولًا */
+  }
+
+  .story .story-text {
+    order: 2;
+  }
+
+  .story .story-media {
+    order: 1;
+  }
+
+  .story-text {
+    text-align: center;
+  }
+
+  .story-media video {
+    width: 100%;
+    border-radius: 15px;
+  }
+}
+
+</style>
+
+<script>
+const stories = document.querySelectorAll('.story');
+let current = 0;
+
+document.getElementById('switch-btn').addEventListener('click', () => {
+  stories[current].classList.remove('active');
+
+  // ننتقل للقصة التالية
+  current = (current + 1) % stories.length;
+
+  stories[current].classList.add('active');
+});
+</script>
+
+<section class="achievements-section text-center py-5">
+  <h2 class="mb-5" data-ar="الإنجازات" data-en="Achievements">الإنجازات</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <!-- بطاقة البرامج -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="achievement-card p-4 bg-white rounded shadow">
+          <div class="icon mb-3">
+            <i class="fas fa-book-open fa-3x text-primary"></i> 
+          </div>
+          <h3 class="counter" data-target="5">0</h3>
+          <p data-ar="البرامج" data-en="Programs">البرامج</p>
+        </div>
+      </div>
+
+      
+      <div class="col-6 col-md-3 mb-4">
+        <div class="achievement-card p-4 bg-white rounded shadow">
+          <div class="icon mb-3">
+            <i class="fas fa-lightbulb fa-3x text-warning"></i> 
+          </div>
+          <h3 class="counter" data-target="187">0</h3>
+          <p data-ar="المبادرات" data-en="Initiatives">المبادرات</p>
+        </div>
+      </div>
+
+      
+      <div class="col-6 col-md-3 mb-4">
+        <div class="achievement-card p-4 bg-white rounded shadow">
+          <div class="icon mb-3">
+            <i class="fas fa-handshake fa-3x text-success"></i> 
+          </div>
+          <h3 class="counter" data-target="32">0</h3>
+          <p data-ar="الشركاء والمانحون" data-en="Partners & Donors">الشركاء والمانحون</p>
+        </div>
+      </div>
+
+      <!-- بطاقة المتطوعون -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="achievement-card p-4 bg-white rounded shadow">
+          <div class="icon mb-3">
+            <i class="fas fa-hands-helping fa-3x text-info"></i> 
+          </div>
+          <h3 class="counter" data-target="137">0</h3>
+          <p data-ar="المتطوعون" data-en="Volunteers">المتطوعون</p>
+        </div>
+      </div>
+
+      
+      <div class="col-6 col-md-3 mb-4">
+        <div class="achievement-card p-4 bg-white rounded shadow">
+          <div class="icon mb-3">
+            <i class="fas fa-user-friends fa-3x text-danger"></i> 
+          </div>
+          <h3 class="counter" data-target="327225">0</h3>
+          <p data-ar="المستفيدين" data-en="Beneficiaries">المستفيدين</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="site-footer" id="Contact">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم ...<br>على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم ...<br>على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+ <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+
+</footer>
+ <script>
+
+
+  
+ 
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
+  </script>
+
+</body>
+</html>

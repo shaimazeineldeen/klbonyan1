@@ -1,0 +1,597 @@
+body {
+  margin: 0;
+      font-family: 'Cairo', sans-serif;  
+}
+h1, h2, h3, a {
+  font-family: 'Cairo', sans-serif; 
+}
+p, li {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#partners {
+  scroll-margin-top: 160px; 
+}
+#Contact {
+  scroll-margin-top: 200px; 
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  padding-top: 120px; 
+}
+
+
+.donate-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #F0CC8E; /* لون الزر */
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0; /* مخفي في البداية */
+  pointer-events: none; /* لا يمكن النقر */
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+
+  /* نبض مستمر */
+  animation: pulse 2s infinite;
+}
+
+/* ظهور الزر عند إضافة الكلاس show */
+.donate-float-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* الأيقونة داخل الزر */
+.donate-float-btn i {
+  font-size: 22px;
+  color: red; /* لون الأيقونة */
+}
+
+/* تأثير عند المرور بالماوس */
+.donate-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(240, 204, 142, 1);
+}
+
+/* نبض مستمر */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 15px rgba(240, 204, 142, 0.7); }
+  50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(240, 204, 142, 1); }
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(240, 204, 142, 0.7); }
+}
+
+/* الجوال */
+@media (max-width: 768px) {
+  .donate-float-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .donate-float-btn i {
+    font-size: 20px;
+  }
+}
+
+
+
+
+.hero-section {
+  position: relative;
+  background-image: url('img/نهائي.png');
+  
+ background-size: 110% 110%;       
+  background-position: center;  
+  background-repeat: no-repeat;
+
+  width: 100%;                   /* يغطي العرض كامل */
+  height: 100vh;                
+
+  display: flex;                 /* تفعيل الفليكس */
+  justify-content: center;      
+  align-items: center;           /* توسيط عمودي */
+  flex-direction: column;        
+
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+
+  margin-top: 36px;     
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 86%;
+  margin: 0;
+  color: black;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: left;
+  word-break: break-word;
+  white-space: normal;
+  z-index: 5;
+}
+
+/* 📱 شاشات متوسطة */
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 1px; /* صغر الخط أكثر */
+    padding: 15px 15px;
+  }
+}
+
+/* 📱 جوال صغير جدًا */
+@media (max-width: 480px) {
+  .header-text {
+    font-size: 16px; /* تصغير إضافي للخط */
+    padding: 10px 10px;
+  }
+}
+
+
+/* الزر يظل بأسفل الصورة */
+.donate-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.donate-btn {
+  font-size: 18px;
+  padding: 12px 24px;
+  font-weight: bold;
+  background-color: #F0CC8E;
+  color: black;
+  border-radius: 25px;
+  border: 3px solid #F0CC8E;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* توهج أساسي */
+  box-shadow: 
+    0 0 20px rgba(240, 204, 142, 1),
+    0 0 40px rgba(240, 204, 142, 0.8),
+    0 0 60px rgba(240, 204, 142, 0.6);
+
+  /* نبض + وميض */
+  animation: pulseGlow 2s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+/* أنيميشن نبض + توهج */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 15px rgba(240, 204, 142, 0.9),
+      0 0 30px rgba(240, 204, 142, 0.7),
+      0 0 45px rgba(240, 204, 142, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 
+      0 0 25px rgba(240, 204, 142, 1),
+      0 0 50px rgba(240, 204, 142, 0.9),
+      0 0 75px rgba(240, 204, 142, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 15px rgba(240, 204, 142, 0.9),
+      0 0 30px rgba(240, 204, 142, 0.7),
+      0 0 45px rgba(240, 204, 142, 0.5);
+  }
+}
+
+/* لما تقرّب الماوس */
+.donate-btn:hover {
+  transform: scale(1.15); /* يكبر أكثر */
+  box-shadow: 
+    0 0 40px rgba(240, 204, 142, 1),
+    0 0 80px rgba(240, 204, 142, 0.95),
+    0 0 120px rgba(240, 204, 142, 0.85);
+}
+
+
+/* الجوال */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 400px; /* بس يتقلص شوية */
+  }
+
+  .header-text {
+    font-size: 28px;
+  }
+
+  .donate-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+.team-section {
+  text-align: center;
+  padding: 30px 20px; 
+  background: #f4f5f6; /* لون خلفية باهت وهادئ */
+  border-radius: 20px; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto; 
+  max-width: 1150px; 
+}
+
+.team-section h2 {
+  font-size: 30px;
+  margin-bottom: 50px; 
+  position: relative;
+  top: -30px; /* تحريك العنوان للأعلى */
+  font-weight: bold;
+
+  /* تدرج لوني */
+  background: linear-gradient(90deg, black, black); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-info h3 {
+  white-space: nowrap;
+  text-align: center;  
+  margin: 0 auto;      
+}
+
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 20px 20px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: visible;
+
+  
+  opacity: 0;
+  transform: translateY(50px); /* يبدأ أسفل مكانه الطبيعي */
+}
+
+
+.team-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.team-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* الصورة طالعة من الكارد */
+.team-img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.team-img img {
+  width: auto;          /* العرض الأصلي للصورة */
+  height: 120px;       
+  max-width: 100%;     
+  border-radius: 50%;
+  object-fit: contain;  
+  border: 4px solid #F0CC8E;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+
+
+.team-card:hover .team-img img {
+  transform: scale(1.1);
+}
+
+.team-info {
+  margin-top: 70px; 
+}
+.team-info {
+  margin-top: 70px; /* مسافة تحت الصورة */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* يجعل h3 فوق p */
+  align-items: center; 
+  gap: 5px; 
+}
+
+.team-card h3 {
+  margin: 0; 
+  font-size: 20px;
+  color: #000;
+}
+
+.team-card p {
+  font-size: 15px;
+  color: #555;
+  margin: 0; 
+}
+
+
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 20px;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a.fb:hover {
+  color: #3b5998;
+  transform: scale(1.2);
+}
+
+.social-links a.ig:hover {
+  color: #e4405f;
+  transform: scale(1.2);
+}
+/* قسم الشركاء */
+
+
+/* السلايدر */
+.partners-section {
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5eee3;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/* الخط المموج */
+.partners-section::before {
+  content: "";
+  position: absolute;
+  bottom: 50%; /* مكان الخط داخل القسم */
+  left: -100%;
+  width: 300%;
+  height: 20px; /* سمك الموجة */
+  background: #f0c080; /* لون الخط */
+  border-radius: 50%; 
+  transform: rotate(0deg);
+  animation: waveMove 4s linear infinite;
+  clip-path: polygon(
+    0% 50%, 10% 40%, 20% 60%, 30% 40%, 40% 60%, 
+    50% 40%, 60% 60%, 70% 40%, 80% 60%, 90% 40%, 100% 50%
+  ); 
+}
+
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); } 
+}
+
+
+.partners-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* عنوان الشركاء */
+.partners-section h2 {
+   font-size: 30px;
+  margin-bottom: 50px; 
+  position: relative;
+  top: -30px; /* تحريك العنوان للأعلى */
+  font-weight: bold;
+
+  /* تدرج لوني */
+  background: linear-gradient(90deg, #000, #000); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* السلايدر */
+.partners-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partners-track {
+  display: flex;
+  gap: 60px; 
+  animation: slide 20s linear infinite, fadeIn 1.5s ease forwards;
+  opacity: 0; /* لظهور تدريجي */
+}
+
+/* حركة fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.partners-track .partner-logo {
+  flex-shrink: 0;
+}
+
+/* الشعارات */
+.partner-logo img {
+  max-height: 120px; 
+  width: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+.partner-logo a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* تأثير الندعس عند Hover */
+.partner-logo a:hover {
+  transform: scale(0.95);
+}
+
+/* تأثير الندعس عند النقر */
+.partner-logo a:active {
+  transform: scale(0.9);
+}
+/* عند المرور على أي شعار داخل السلايدر */
+.partners-slider:hover .partners-track,
+.partner-logo:hover img {
+  animation-play-state: paused; /* إيقاف الحركة */
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-50%); /* النهاية على اليسار */
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .partners-track {
+    gap: 20px;
+  }
+  .partner-logo img {
+    max-height: 60px;
+  }
+}
+
+
+.achievements-section {
+  background: linear-gradient(135deg, #bdb8b1, #ecd9b8, #f1ece5, #e3d9c9);
+  background-size: 400% 400%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  
+  /* حركة الخلفية */
+  animation: gradientMove 15s ease infinite;
+}
+
+/* تعريف الحركة */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.achievements-section .row > [class*="col-"] {
+  margin-bottom: 60px; 
+  padding-left: 30px;  
+  padding-right: 30px;
+}
+
+
+/* عنوان القسم */
+.achievements-section h2 {
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+.achievements-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+
+.achievement-card {
+  position: relative;
+  background: #fff;
+  border-radius: 25px;
+  padding: 15px 10px;
+  width: 140px;       
+  height: 260px;      
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;    
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.achievement-card .icon i {
+  font-size: 3rem;
+  margin-bottom: 0; 
+}
+
+
+.achievement-card .counter {
+  font-size: 28px;
+  font-weight: bold;
+  color: #F0CC8E;
+  margin: 0; 
+}
+
+/* النص */
+.achievement-card p {
+  font-size: 20px;
+  color: #444;
+  margin: 0; 
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج الصحة - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+    <script src="script.js" defer></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  
+ <style>
+  
+.lang-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+ 
+  left: 80px; 
+}
+
+html[dir="ltr"] .lang-btn {
+  left: auto;  
+  right: 80px; 
+}
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+  </style>
+</head>
+<body>
+ <header>
+ 
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+   
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+     
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+                   <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="sub-header">
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="health.html" class="home-link">
+    <i class="fas fa-book-open"></i>
+    <span id="program-text" data-ar="البرامج" data-en="Programs">البرامج</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="health.html" class="home-link">
+   <i class="fas fa-heartbeat"></i>
+    <span id="education-text" data-ar="الصحة" data-en="Health">الصحة</span>
+  </a>
+</div>
+
+
+
+
+<div class="progra-image-wrapper">
+  <img src="img/صحة6.jpg" alt="الإستجابة للطوارئ" class="program-image">
+  <video controls>
+          <source src="vid/WhatsApp Video 2025-10-09 at 9.00.41 PM.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+   <img src="img/صحة10.jpg" alt="الإستجابة للطوارئ" class="program-image">  
+        
+      
+</div>
+
+<section class="program-section">
+  <h2 id="section-title" data-ar="الصحة" data-en="Health">الصحة</h2>
+  <h3 class="program-subtitle" id="program-subtitle"
+      data-ar="الصحة حق أساسي لا غنى عنه لكل إنسان"
+      data-en="Health is a fundamental right for every human being">
+    الصحة حق أساسي لا غنى عنه لكل إنسان
+  </h3>
+  </section>
+<section class="program-section">
+  <h4 id="idea-title" data-ar="الفكرة" data-en="vision">الفكرة</h4>
+  <p id="idea-text-1"
+     data-ar='في غزة، المرض والإصابة مش بس خطر، بل أصبحت ندرة الدواء، غياب المراكز الطبية، وانهيار البنية الصحية خطرًا يهدد أرواح المدنيين، خاصة الأطفال والنساء والمسنين. الحرب أغلقت أبواب العيادات، وأرهقت الطواقم الطبية، وجعلت الوصول إلى أبسط الخدمات الصحية تحديًا يوميًا يواجهه الناس بلا حماية.'
+     data-en='In Gaza, illness and injury are not only a danger, but the scarcity of medicine, lack of medical centers, and the collapse of the health infrastructure pose a serious threat to civilians, especially children, women, and the elderly. The war has closed clinic doors, exhausted medical staff, and made access to basic health services a daily challenge without protection.'>
+   في غزة، المرض والإصابة مش بس خطر، بل أصبحت ندرة الدواء، غياب المراكز الطبية، وانهيار البنية الصحية خطرًا يهدد أرواح المدنيين، خاصة الأطفال والنساء والمسنين. الحرب أغلقت أبواب العيادات، وأرهقت الطواقم الطبية، وجعلت الوصول إلى أبسط الخدمات الصحية تحديًا يوميًا يواجهه الناس بلا حماية
+  </p>
+  <p id="idea-text-2"
+     data-ar='ومن داخل المعاناة، بلش كالبنيان برنامج الاستجابة الصحية الطارئة، بهدف حماية الحق الأساسي في العلاج والرعاية، وتخفيف العبء عن كاهل مجتمع يُحاصَر من كل جانب.'
+     data-en='Amidst the suffering, Kalbonyan launched an emergency health response program aimed at protecting the fundamental right to treatment and care, and alleviating the burden on a community besieged from all sides.'>
+   ومن داخل المعاناة، بلش كالبنيان برنامج الاستجابة الصحية الطارئة، بهدف حماية الحق الأساسي في العلاج والرعاية، وتخفيف العبء عن كاهل مجتمع يُحاصَر من كل جانب
+  </p>
+</section>
+<section class="program-section">
+  <h4 id="what-provides-title" data-ar="ماذا يقدم البرنامج؟" data-en="What Does Program Provide?">ماذا يقدم البرنامج</h4>
+  <ul class="what-provides-list"
+      data-ar='
+        <li>إنشاء مساحات طبية مؤقتة وفعّالة داخل مراكز الإيواء والمناطق المكتظة والمجاورة للمساحات التعليمية.</li>
+        <li>تدريبات للكوادر الطبية والتمريضية على الإسعاف الأولي والدعم النفسي للتعامل مع الحالات الطارئة والصدمات.</li>
+        <li>تقديم الأدوية الأساسية والاستشارات الطبية المجانية، خاصة للأمراض المزمنة والحالات الطارئة.</li>
+        <li>تنفيذ جلسات توعية وتثقيف صحي، تساهم في رفع الوعي العام والوقاية داخل المجتمع.</li>
+        <li>التنسيق مع وزارة الصحة والمؤسسات ذات العلاقة لضمان تكامل الجهود وتوسيع نطاق الخدمة.</li>'
+      data-en='
+        <li>Set up temporary and effective medical spaces within shelters and densely populated areas near educational spaces.</li>
+        <li>Train medical and nursing staff on first aid and psychological support to handle emergencies and trauma cases.</li>
+        <li>Provide essential medicines and free medical consultations, especially for chronic illnesses and emergency cases.</li>
+        <li>Conduct awareness and health education sessions to increase public awareness and community prevention.</li>
+        <li>Coordinate with the Ministry of Health and relevant institutions to ensure comprehensive efforts and expand service coverage.</li>'>
+     <li>إنشاء مساحات طبية مؤقتة وفعّالة داخل مراكز الإيواء والمناطق المكتظة والمجاورة للمساحات التعليمية.</li>
+        <li>تدريبات للكوادر الطبية والتمريضية على الإسعاف الأولي والدعم النفسي للتعامل مع الحالات الطارئة والصدمات.</li>
+        <li>تقديم الأدوية الأساسية والاستشارات الطبية المجانية، خاصة للأمراض المزمنة والحالات الطارئة.</li>
+        <li>تنفيذ جلسات توعية وتثقيف صحي، تساهم في رفع الوعي العام والوقاية داخل المجتمع.</li>
+        <li>التنسيق مع وزارة الصحة والمؤسسات ذات العلاقة لضمان تكامل الجهود وتوسيع نطاق الخدمة.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="output-title" data-ar="المخرجات" data-en="Outputs">المخرجات</h4>
+  <ul id="output-list"
+      data-ar='
+        <li>تفعيل مجموعة من النقاط الطبية المجتمعية تقدم خدمات مباشرة في مناطق الإيواء والمجتمعات المكتظة.</li>
+        <li>تدريب مجموعات من الكادر الطبية والتمريضية على الإسعاف الأولي والدعم النفسي في ظروف الطوارئ.</li>
+        <li>تقديم خدمات طبية أساسية (استشارات - أدوية - إسعافات) لما يزيد عن 2,000 مستفيد من الفئات الضعيفة.</li>
+        <li>تنفيذ أكثر من 20 جلسة توعوية وتثقيفية حول الوقاية الصحية والرعاية النفسية الأولية.</li>
+        <li>تعزيز التنسيق مع وزارة الصحة لتكامل التدخلات وتحقيق تغطية صحية أوسع.</li>'
+      data-en='
+        <li>Activate a set of community medical points providing direct services in shelters and densely populated areas.</li>
+        <li>Train medical and nursing teams on first aid and psychological support in emergency conditions.</li>
+        <li>Provide essential medical services (consultations - medicines - first aid) to over 2,000 beneficiaries from vulnerable groups.</li>
+        <li>Conduct more than 20 awareness and educational sessions on health prevention and primary psychological care.</li>
+        <li>Enhance coordination with the Ministry of Health to integrate interventions and achieve wider health coverage.</li>'>
+   <li>تفعيل مجموعة من النقاط الطبية المجتمعية تقدم خدمات مباشرة في مناطق الإيواء والمجتمعات المكتظة.</li>
+        <li>تدريب مجموعات من الكادر الطبية والتمريضية على الإسعاف الأولي والدعم النفسي في ظروف الطوارئ.</li>
+        <li>تقديم خدمات طبية أساسية (استشارات - أدوية - إسعافات) لما يزيد عن 2,000 مستفيد من الفئات الضعيفة.</li>
+        <li>تنفيذ أكثر من 20 جلسة توعوية وتثقيفية حول الوقاية الصحية والرعاية النفسية الأولية.</li>
+        <li>تعزيز التنسيق مع وزارة الصحة لتكامل التدخلات وتحقيق تغطية صحية أوسع.</li>
+  </ul>
+</section>
+
+
+
+<section class="program-section">
+  <h4 id="recommendations-title" data-ar="التوصيات" data-en="Recommendations">التوصيات</h4>
+  <ul id="recommendations-list"
+      data-ar='
+        <li>توسيع النقاط الطبية المجتمعية لتغطية مزيد من المناطق المنكوبة والمحرومة.</li>
+        <li>دعم استدامة التدريب للكوادر الصحية لضمان الجاهزية المستمرة في الطوارئ.</li>
+        <li>تأمين تمويل دائم للأدوية والخدمات الأساسية للفئات المتأثرة بالحرب.</li>
+        <li>دمج الدعم النفسي ضمن الرعاية الصحية كجزء أساسي من الاستجابة.</li>
+        <li>تعزيز الشراكات مع المؤسسات الصحية لزيادة فعالية وتأثير التدخلات.</li>
+        <li>تقديم رؤية واضحة من كالبنيان اتجاه تدخلاتها في المجال الصحي.</li>'
+      data-en='
+        <li>Expand community medical points to cover more affected and underserved areas.</li>
+        <li>Support sustainable training for health personnel to ensure continuous readiness in emergencies.</li>
+        <li>Secure permanent funding for medicines and essential services for war-affected groups.</li>
+        <li>Integrate psychological support into health care as a core part of the response.</li>
+        <li>Strengthen partnerships with health institutions to enhance effectiveness and impact of interventions.</li>
+        <li>Provide a clear vision from Kalbonyan regarding its health interventions.</li>'>
+    <li>توسيع النقاط الطبية المجتمعية لتغطية مزيد من المناطق المنكوبة والمحرومة.</li>
+        <li>دعم استدامة التدريب للكوادر الصحية لضمان الجاهزية المستمرة في الطوارئ.</li>
+        <li>تأمين تمويل دائم للأدوية والخدمات الأساسية للفئات المتأثرة بالحرب.</li>
+        <li>دمج الدعم النفسي ضمن الرعاية الصحية كجزء أساسي من الاستجابة.</li>
+        <li>تعزيز الشراكات مع المؤسسات الصحية لزيادة فعالية وتأثير التدخلات.</li>
+        <li>تقديم رؤية واضحة من كالبنيان اتجاه تدخلاتها في المجال الصحي.</li>
+  </ul>
+</section>
+
+<section class="slider-section">
+  <div class="slider-wrapper">
+   <h2 class="slider-title" 
+    data-ar="شاهد لقطاتنا" 
+    data-en="Watch Our Moments">
+  شاهد لقطاتنا
+</h2>
+
+    <div class="slider-container">
+
+      <div class="arrow arrow-left">&#10094;</div>
+      <div class="arrow arrow-right">&#10095;</div>
+
+
+      <div class="slider-track">
+        <div class="slider-item"><img src="img/صحة1.jpg" alt="صورة 1"></div>
+        <div class="slider-item"><img src="img/صحة2.jpg" alt="صورة 2"></div>
+         <div class="slider-item"><img src="img/صحة3.jpg" alt="صورة 1"></div>
+        <div class="slider-item"><img src="img/صحة4.jpg" alt="صورة 2"></div>
+        <div class="slider-item"><img src="img/صحة5.jpg" alt="صورة 3"></div>
+        <div class="slider-item"><img src="img/صحة16.jpg" alt="صورة 4"></div>
+        <div class="slider-item"><img src="img/صحة14.jpg" alt="صورة 5"></div>
+        <div class="slider-item center"><img src="img/صحة13.jpg" alt="صورة 6"></div>
+        <div class="slider-item"><img src="img/صحة8.jpg" alt="صورة 7"></div>
+        <div class="slider-item"><img src="img/صحة9.jpg" alt="صورة 8"></div>
+        <div class="slider-item"><img src="img/صحة18.jpg" alt="صورة 9"></div>
+        <div class="slider-item"><img src="img/صحة11.jpg" alt="صورة 10"></div>
+        <div class="slider-item"><img src="img/صحة12.jpg" alt="صورة 11"></div>
+         <div class="slider-item"><img src="img/صحة7.jpg" alt="صورة 10"></div>
+        <div class="slider-item"><img src="img/صحة15.jpg" alt="صورة 11"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+ <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+</footer>
+<script>
+const track = document.querySelector('.slider-track');
+const items = Array.from(document.querySelectorAll('.slider-item'));
+const container = document.querySelector('.slider-container');
+
+let centerIndex = Math.floor(items.length / 2);
+
+function updateCenter() {
+  items.forEach(item => item.classList.remove('center'));
+  const centerItem = items[centerIndex];
+  centerItem.classList.add('center');
+
+  const containerRect = container.getBoundingClientRect();
+  const itemRect = centerItem.getBoundingClientRect();
+
+  
+  let translateX = itemRect.left + itemRect.width/2 - (containerRect.left + containerRect.width/2);
+
+  
+  const currentTransform = track.style.transform.match(/-?\d+\.?\d*/);
+  const currentTranslate = currentTransform ? parseFloat(currentTransform[0]) : 0;
+  track.style.transform = `translateX(${currentTranslate - translateX}px)`;
+}
+
+
+updateCenter();
+
+// الأسهم
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  if(centerIndex > 0) {
+    centerIndex--;
+    updateCenter();
+  }
+});
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  if(centerIndex < items.length - 1) {
+    centerIndex++;
+    updateCenter();
+  }
+});
+
+</script>
+
+<script>
+
+
+
+let currentLang = "ar";
+
+const translations = {
+  ar: {
+    homeText: "الرئيسية",
+    programText: "البرامج",
+    sectionTitle: "الصحة",
+    programSubtitle: "الصحة حق أساسي لا غنى عنه لكل إنسان",
+    ideaTitle: "الفكرة",
+    ideaText1: "في غزة، المرض والإصابة مش بس خطر، بل أصبحت ندرة الدواء، غياب المراكز الطبية، وانهيار البنية الصحية خطرًا يهدد أرواح المدنيين، خاصة الأطفال والنساء والمسنين. الحرب أغلقت أبواب العيادات، وأرهقت الطواقم الطبية، وجعلت الوصول إلى أبسط الخدمات الصحية تحديًا يوميًا يواجهه الناس بلا حماية.",
+    ideaText2: "ومن داخل المعاناة، بلش كالبنيان برنامج الاستجابة الصحية الطارئة، بهدف حماية الحق الأساسي في العلاج والرعاية، وتخفيف العبء عن كاهل مجتمع يُحاصَر من كل جانب.",
+    whatProvidesTitle: "ماذا يقدم كالبنيان؟",
+    whatProvidesList: [
+      "إنشاء مساحات طبية مؤقتة وفعّالة داخل مراكز الإيواء والمناطق المكتظة والمجاورة للمساحات التعليمية.",
+      "تدريبات للكوادر الطبية والتمريضية على الإسعاف الأولي والدعم النفسي للتعامل مع الحالات الطارئة والصدمات.",
+      "تقديم الأدوية الأساسية والاستشارات الطبية المجانية، خاصة للأمراض المزمنة والحالات الطارئة.",
+      "تنفيذ جلسات توعية وتثقيف صحي، تساهم في رفع الوعي العام والوقاية داخل المجتمع.",
+      "التنسيق مع وزارة الصحة والمؤسسات ذات العلاقة لضمان تكامل الجهود وتوسيع نطاق الخدمة."
+    ],
+    outputTitle:"المخرجات",
+    outputList: [
+      "تفعيل مجموعة من النقاط الطبية المجتمعية تقدم خدمات مباشرة في مناطق الإيواء والمجتمعات المكتظة.",
+      "تدريب مجموعات من الكادر الطبية والتمريضية على الإسعاف الأولي والدعم النفسي في ظروف الطوارئ.",
+      "تقديم خدمات طبية أساسية (استشارات - أدوية - إسعافات) لما يزيد عن 2,000 مستفيد من الفئات الضعيفة.",
+      "تنفيذ أكثر من 20 جلسة توعوية وتثقيفية حول الوقاية الصحية والرعاية النفسية الأولية.",
+      "تعزيز التنسيق مع وزارة الصحة لتكامل التدخلات وتحقيق تغطية صحية أوسع."
+    ],
+    activitiesTitle: "الأنشطة",
+    activitiesList: [
+      "إنشاء نقاط طبية مجتمعية متنقلة في مراكز الإيواء والمناطق المكتظة بالسكان.",
+      "تدريب فرق طبية وتمريضية على الإسعاف الأولي والدعم النفسي في الطوارئ.",
+      "تقديم الأدوية الأساسية والاستشارات المجانية للفئات المتضررة.",
+      "تنفيذ جلسات توعية وتثقيف صحي للأطفال والأهالي حول الوقاية والرعاية الذاتية.",
+      "التنسيق مع وزارة الصحة والمؤسسات الصحية لضمان استجابة شاملة ومتكاملة."
+    ],
+    recommendationsTitle: "التوصيات",
+    recommendationsList: [
+      "توسيع النقاط الطبية المجتمعية لتغطية مزيد من المناطق المنكوبة والمحرومة.",
+      "دعم استدامة التدريب للكوادر الصحية لضمان الجاهزية المستمرة في الطوارئ.",
+      "تأمين تمويل دائم للأدوية والخدمات الأساسية للفئات المتأثرة بالحرب.",
+      "دمج الدعم النفسي ضمن الرعاية الصحية كجزء أساسي من الاستجابة.",
+      "تعزيز الشراكات مع المؤسسات الصحية لزيادة فعالية وتأثير التدخلات.",
+      "تقديم رؤية واضحة من كالبنيان اتجاه تدخلاتها في المجال الصحي."
+    ]
+  },
+  en: {
+    homeText: "Home",
+    programText: "Programs",
+    sectionTitle: "Health",
+    programSubtitle: "Health is a fundamental right for every human",
+    ideaTitle: "Idea",
+    ideaText1: "In Gaza, illness and injury are not only dangerous, but the scarcity of medicine, absence of medical centers, and collapse of health infrastructure threatens the lives of civilians, especially children, women, and the elderly. The war closed clinics, exhausted medical staff, and made access to basic health services a daily challenge without protection.",
+    ideaText2: "Amidst suffering, Kalbonyan started the Emergency Health Response Program to protect the basic right to treatment and care, and to reduce the burden on a besieged community.",
+    whatProvidesTitle: "What does Kalbonyan provide",
+    whatProvidesList: [
+      "Establish temporary and effective medical spaces in shelters, crowded areas, and near educational spaces.",
+      "Train medical and nursing staff in first aid and psychological support for emergencies and trauma cases.",
+      "Provide essential medicines and free medical consultations, especially for chronic illnesses and emergencies.",
+      "Conduct awareness and health education sessions to raise general awareness and prevention in the community.",
+      "Coordinate with the Ministry of Health and related institutions to ensure integrated efforts and expand service coverage."
+    ],
+    outputTitle:"Outputs",
+    outputList: [
+      "Activate a set of community medical points providing direct services in shelters and densely populated communities.",
+      "Train groups of medical and nursing staff on first aid and psychological support in emergency situations.",
+      "Provide basic medical services (consultations – medications – first aid) to over 2,000 beneficiaries from vulnerable groups.",
+      "Conduct more than 20 awareness and educational sessions on health prevention and primary psychological care.",
+      "Strengthen coordination with the Ministry of Health to integrate interventions and achieve broader healthcare coverage."
+    ],
+    activitiesTitle: "Activities",
+    activitiesList: [
+      "Establish mobile community medical points in shelters and densely populated areas.",
+      "Train medical and nursing teams on first aid and psychological support in emergencies.",
+      "Provide basic medications and free consultations for affected groups.",
+      "Conduct awareness and health education sessions for children and families on prevention and self-care.",
+      "Coordinate with the Ministry of Health and health institutions to ensure a comprehensive and integrated response."
+    ],
+    recommendationsTitle: "Recommendations",
+    recommendationsList: [
+      "Expand community medical points to cover more affected and underserved areas.",
+      "Support the sustainability of training for healthcare staff to ensure continuous readiness in emergencies.",
+      "Secure permanent funding for medications and essential services for populations affected by the war.",
+      "Integrate psychological support into healthcare as a core part of the response.",
+      "Strengthen partnerships with health institutions to increase the effectiveness and impact of interventions.",
+      "Provide a clear vision from Kalbonyan regarding its interventions in the health sector."
+    ]
+  }
+};
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  const t = translations[currentLang];
+
+  
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    el.textContent = currentLang === "ar" ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+  });
+
+  
+  const lists = [
+    {selector: "#section-title", items: [t.sectionTitle]},
+    {selector: "#program-subtitle", items: [t.programSubtitle]},
+    {selector: "#idea-title", items: [t.ideaTitle]},
+    {selector: "#idea-text-1", items: [t.ideaText1]},
+    {selector: "#idea-text-2", items: [t.ideaText2]},
+    {selector: "#what-provides-title", items: [t.whatProvidesTitle]},
+    {selector: ".what-provides-list", items: t.whatProvidesList},
+    {selector: "#output-title", items: [t.outputTitle]},
+    {selector: "#output-list", items: t.outputList},
+    {selector: "#activities-title", items: [t.activitiesTitle]},
+    {selector: "#activities-list", items: t.activitiesList},
+    {selector: "#recommendations-title", items: [t.recommendationsTitle]},
+    {selector: "#recommendations-list", items: t.recommendationsList}
+  ];
+
+  lists.forEach(list => {
+    const elements = document.querySelectorAll(list.selector);
+    elements.forEach((el, i) => {
+    
+      if(el.tagName.toLowerCase() === "ul") {
+        el.querySelectorAll("li").forEach((li, j) => {
+          li.textContent = list.items[j];
+        });
+      } else {
+        el.textContent = list.items[i];
+      }
+    });
+  });
+
+ 
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+
+  
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+
+ 
+  document.querySelectorAll(".program-section").forEach(sec => {
+    sec.style.direction = currentLang === "ar" ? "rtl" : "ltr";
+    sec.style.textAlign = currentLang === "ar" ? "right" : "left";
+  });
+}
+
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>

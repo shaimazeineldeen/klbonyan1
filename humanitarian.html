@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>   التمكين المدني والاجتماعي والاقتصادي - كالبنيان</title>
+  <link rel="stylesheet" href="volunteer.css">
+<script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+   
+.lang-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 18px;
+  background: #F0CC8E;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #707271;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+ 
+  left: 80px; 
+}
+
+html[dir="ltr"] .lang-btn {
+  left: auto;  
+  right: 80px; 
+}
+
+.lang-btn:hover {
+  background: #e0b96d;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lang-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+  </style>
+</head>
+<body>
+<header>
+  
+  <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+
+  <div class="header-content">
+    
+    <div class="header-right">
+      <div class="logo">
+        <img src="img/كالبنيان2.webp" alt="شعار المؤسسة">
+      </div>
+    </div>
+
+    
+    <div class="header-center">
+     
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="main-nav">
+        <a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="البرامج" data-en="Programs">البرامج</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="education.html" data-ar="التعليم" data-en="Education">التعليم</a></li>
+              <li><a href="health.html" data-ar="الصحة" data-en="Health">الصحة</a></li>
+              <li><a href="Emergency Response.html" data-ar="الإستجابة للطوارئ" data-en="Emergency Response">الإستجابة للطوارئ</a></li>
+              <li><a href="Protection.html" data-ar="الحماية" data-en="Protection">الحماية</a></li>
+              <li><a href="humanitarian.html" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social & Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="index1.html" data-ar="الشركاء" data-en="Partners">الشركاء</a>
+
+                   <a href="مستفيد.html" data-ar="الآراء" data-en="Opinions">الآراء </a>
+
+
+        <a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief">خدمات الإغاثة</a>
+
+        <div class="tooltip-container">
+          <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)" data-ar="تقديم طلب" data-en="Apply">تقديم طلب</a>
+          <span class="tooltiptext">
+            <ul>
+              <li><a href="volunteer.html" data-ar="طلب متطوعين" data-en="Volunteer Request">طلب متطوعين</a></li>
+              <li><a href="Beneficiary.html" data-ar="طلب استفادة" data-en="Beneficiary Request">طلب استفادة</a></li>
+            </ul>
+          </span>
+        </div>
+
+        <a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints">آليه الشكاوي</a>
+        <a href="index1.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="sub-header">
+  <a href="index1.html" class="home-link">
+    <i class="fas fa-home"></i>
+    <span id="home-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="humanitarian.html" class="home-link">
+    <i class="fas fa-book-open"></i>
+    <span id="program-text" data-ar="البرامج" data-en="Programs">البرامج</span>
+  </a>
+  <span class="divider">/</span>
+  <a href="humanitarian.html" class="home-link">
+    <i class="fas fa-users-cog"></i>
+
+    <span id="education-text" data-ar="التمكين المدني والاجتماعي والاقتصادي" data-en="Civil, Social, and Economic Empowerment">التمكين المدني والاجتماعي والاقتصادي</span>
+  </a>
+</div>
+
+
+<div class="progra-image-wrapper">
+  <img src="img/مد5.jpg" alt="الإستجابة للطوارئ" class="program-image">
+  <video controls>
+          <source src="vid/WhatsApp Video 2025-10-09 at 9.56.20 PM.mp4" type="video/mp4">
+          متصفحك لا يدعم الفيديو.
+        </video>
+   <img src="img/تم88.jpg" alt="الإستجابة للطوارئ" class="program-image">  
+        
+      
+</div>
+
+<section class="program-section">
+  <h2 id="section-title" 
+      data-ar="التمكين المدني والاجتماعي والاقتصادي" 
+      data-en="Civil, Social, and Economic Empowerment">
+    التمكين المدني والاجتماعي والاقتصادي
+  </h2>
+  <h3 class="program-subtitle" id="program-subtitle"
+      data-ar="في سياقات الأزمات الممتدة يعمل هذا البرنامج ضمن ثلاثة محاور متكاملة: التمكين الاجتماعي للفئات الضعيفة (SEP-V)، التمكين المدني والسياسي (CPE)، والتمكين الاقتصادي (SE). يأتي هذا التدخل استجابةً للحاجة المتزايدة إلى دعم المجتمعات المتضررة من النزاع، وتعزيز قدرتها على الصمود، من خلال رفع الوعي بالحقوق، وبناء المهارات، وتوفير فرص الاستقلال المعيشي والدعم النفسي والاجتماعي، بما يسهم في خلق بيئة أكثر عدلًا وكرامة، وتمكينًا للأفراد للمشاركة الفاعلة في إعادة بناء مجتمعهم. مركزين على الفئة الاكثر حاجة وهم الأطفال والنساء والشباب وذوي الإعاقة."
+      data-en="In contexts of prolonged crises, this program works within three integrated axes: Social Empowerment for vulnerable groups (SEP-V), Civil and Political Empowerment (CPE), and Economic Empowerment (SE). This intervention responds to the growing need to support conflict-affected communities and enhance their resilience by raising rights awareness, building skills, providing livelihood opportunities, and delivering psychological and social support, creating a more just and dignified environment and enabling individuals to actively participate in rebuilding their communities. Focused on the most vulnerable groups: children, women, youth, and people with disabilities.">
+      في سياقات الأزمات الممتدة يعمل هذا البرنامج ضمن ثلاثة محاور متكاملة: التمكين الاجتماعي للفئات الضعيفة (SEP-V)، التمكين المدني والسياسي (CPE)، والتمكين الاقتصادي (SE). يأتي هذا التدخل استجابةً للحاجة المتزايدة إلى دعم المجتمعات المتضررة من النزاع، وتعزيز قدرتها على الصمود، من خلال رفع الوعي بالحقوق، وبناء المهارات، وتوفير فرص الاستقلال المعيشي والدعم النفسي والاجتماعي، بما يسهم في خلق بيئة أكثر عدلًا وكرامة، وتمكينًا للأفراد للمشاركة الفاعلة في إعادة بناء مجتمعهم. مركزين على الفئة الاكثر حاجة وهم الأطفال والنساء والشباب وذوي الإعاقة.
+  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="idea-title" data-ar="الأهداف" data-en="Objectives">الأهداف</h4>
+  <h3 id="idea-list"
+      data-ar="نسعى في كالبنيان إلى تمكين مهارات الإنسان، لا بصفته مستفيدًا فقط، بل فاعلًا وشريكًا في صناعة التغيير. من خلال برنامج التمكين المدني والاجتماعي والاقتصادي، نطمح إلى بناء قدرات الأفراد، خاصة من الفئات الهشة، ليمتلكوا أدوات المشاركة، وحق اتخاذ القرار، والقدرة على إعالة أنفسهم بكرامة. فتمكين المرأة، والشباب، وذوي الإعاقة، ليس فقط حقًا، بل هو ركيزة للصمود المجتمعي، وحجر أساس لإعادة بناء نسيج اجتماعي عادل."
+      data-en="At Kalbonyan, we aim to empower people skills, not only as beneficiaries but as active participants and partners in change. Through the Civil, Social, and Economic Empowerment program, we aspire to build individuals’ capacities, especially the vulnerable groups, to equip them with tools for participation, decision-making rights, and the ability to sustain themselves with dignity. Empowering women, youth, and people with disabilities is not only a right but a cornerstone for community resilience and a foundation for rebuilding a just social fabric.">
+نسعى في كالبنيان إلى تمكين مهارات الإنسان، لا بصفته مستفيدًا فقط، بل فاعلًا وشريكًا في صناعة التغيير. من خلال برنامج التمكين المدني والاجتماعي والاقتصادي، نطمح إلى بناء قدرات الأفراد، خاصة من الفئات الهشة، ليمتلكوا أدوات المشاركة، وحق اتخاذ القرار، والقدرة على إعالة أنفسهم بكرامة. فتمكين المرأة، والشباب، وذوي الإعاقة، ليس فقط حقًا، بل هو ركيزة للصمود المجتمعي، وحجر أساس لإعادة بناء نسيج اجتماعي عادل  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="activities-title" data-ar="ماذا يقدم البرنامج؟" data-en="what the program provides?">ماذا يقدم البرنامج?</h4>
+  <ul id="activities-list"
+      data-ar='
+        <li>بناء قدرات الشباب والنساء وذوي الإعاقة من خلال تدريبات وورش عمل متخصصة.</li>
+        <li>تعزيز المشاركة المدنية عبر دعم المبادرات المجتمعية وتشجيع العمل التطوعي.</li>
+        <li>توفير الدعم النفسي لتعزيز الصمود الفردي والجماعي في وجه الأزمات.</li>
+        <li>فتح مشاريع صغيرة تحقق الاستقلال المعيشي من خلال برامج تدريب مهني وتقديم منح نقدية.</li>
+        <li>تنظيم حملات توعية لتعزيز الوعي بحقوق الإنسان والمشاركة السياسية والاجتماعية.</li>
+        <li>تنفيذ لقاءات حوارية رقمية وميدانية بمشاركة الشباب والنساء وذوي الإعاقة.</li>
+        <li>التنسيق مع المؤسسات المحلية والدولية لضمان استدامة البرامج وفعاليتها.</li>'
+      data-en='
+        <li>Build capacities of youth, women, and people with disabilities through specialized trainings and workshops.</li>
+        <li>Enhance civil participation by supporting community initiatives and encouraging volunteer work.</li>
+        <li>Provide psychological support to strengthen individual and collective resilience in crises.</li>
+        <li>Launch small projects to achieve livelihood independence through vocational training programs and cash grants.</li>
+        <li>Organize awareness campaigns to promote knowledge of human rights and political and social participation.</li>
+        <li>Conduct digital and field dialogue sessions with youth, women, and people with disabilities.</li>
+        <li>Coordinate with local and international institutions to ensure program sustainability and effectiveness.</li>'>
+   <li>بناء قدرات الشباب والنساء وذوي الإعاقة من خلال تدريبات وورش عمل متخصصة.</li>
+        <li>تعزيز المشاركة المدنية عبر دعم المبادرات المجتمعية وتشجيع العمل التطوعي.</li>
+        <li>توفير الدعم النفسي لتعزيز الصمود الفردي والجماعي في وجه الأزمات.</li>
+        <li>فتح مشاريع صغيرة تحقق الاستقلال المعيشي من خلال برامج تدريب مهني وتقديم منح نقدية.</li>
+        <li>تنظيم حملات توعية لتعزيز الوعي بحقوق الإنسان والمشاركة السياسية والاجتماعية.</li>
+        <li>تنفيذ لقاءات حوارية رقمية وميدانية بمشاركة الشباب والنساء وذوي الإعاقة.</li>
+        <li>التنسيق مع المؤسسات المحلية والدولية لضمان استدامة البرامج وفعاليتها.</li>
+  </ul>
+</section>
+
+<section class="program-section">
+  <h4 id="output-title" data-ar="المخرجات" data-en="Outputs">المخرجات</h4>
+  <h3 id="output-list"
+      data-ar="تتمثل في نشوء فئات مجتمعية أكثر وعيًا بحقوقها، وأكثر قدرة على المشاركة في الحياة المدنية وصنع القرار، فئات قادرة على كسر دائرة التبعية من خلال امتلاك أدوات اقتصادية ونفسية ومعرفية تعزز استقلالها. نسعى لأن نرى شابًا يقود مبادرة، وامرأةً تدير مشروعها، وطفلًا يتحدث عن حقه، ومجتمعًا يتماسك رغم الأزمات، مدعومًا بحوارات رقمية وتفاعل مجتمعي مستمر، حيث يصبح التمكين واقعًا لا شعارًا."
+      data-en="This results in more aware social groups regarding their rights, capable of participating in civic life and decision-making, and able to break the cycle of dependency through economic, psychological, and knowledge tools that enhance their independence. We aim to see a youth leading an initiative, a woman managing her project, a child speaking about their rights, and a community that stays cohesive despite crises, supported by digital dialogues and continuous community engagement, making empowerment a reality, not just a slogan.">
+تتمثل في نشوء فئات مجتمعية أكثر وعيًا بحقوقها، وأكثر قدرة على المشاركة في الحياة المدنية وصنع القرار، فئات قادرة على كسر دائرة التبعية من خلال امتلاك أدوات اقتصادية ونفسية ومعرفية تعزز استقلالها. نسعى لأن نرى شابًا يقود مبادرة، وامرأةً تدير مشروعها، وطفلًا يتحدث عن حقه، ومجتمعًا يتماسك رغم الأزمات، مدعومًا بحوارات رقمية وتفاعل مجتمعي مستمر، حيث يصبح التمكين واقعًا لا شعارًا  </h3>
+</section>
+
+<section class="program-section">
+  <h4 id="recommendations-title" data-ar="التوصيات" data-en="Recommendations">التوصيات</h4>
+  <h3 id="recommendations-list"
+      data-ar="بتوسيع الشراكات مع المؤسسات الحكومية والمجتمعية، وتوفير تمويل مرن ومستدام يلبّي احتياجات الفئات الأكثر هشاشة، مع التركيز على النساء، الشباب، وذوي الإعاقة. كما تؤكد على أهمية تطوير أدوات رقمية تفاعلية تُعزّز من الحوار والمشاركة، وتنفيذ حملات مناصرة رقمية تُوصل صوت المجتمعات إلى العالم، إلى جانب بناء آليات تقييم تشاركية تضمن التحسين المستمر وجودة الأثر، لأن التمكين الحقيقي لا يتحقق إلا بالتكامل، والعدالة، وصوت لا يُقصى."
+      data-en="Expand partnerships with governmental and community institutions, and provide flexible and sustainable funding to meet the needs of the most vulnerable groups, focusing on women, youth, and people with disabilities. It also emphasizes the importance of developing interactive digital tools to enhance dialogue and participation, carrying out digital advocacy campaigns to amplify community voices globally, and establishing participatory evaluation mechanisms to ensure continuous improvement and quality impact, because true empowerment can only be achieved through integration, justice, and an inclusive voice.">
+بتوسيع الشراكات مع المؤسسات الحكومية والمجتمعية، وتوفير تمويل مرن ومستدام يلبّي احتياجات الفئات الأكثر هشاشة، مع التركيز على النساء، الشباب، وذوي الإعاقة. كما تؤكد على أهمية تطوير أدوات رقمية تفاعلية تُعزّز من الحوار والمشاركة، وتنفيذ حملات مناصرة رقمية تُوصل صوت المجتمعات إلى العالم، إلى جانب بناء آليات تقييم تشاركية تضمن التحسين المستمر وجودة الأثر، لأن التمكين الحقيقي لا يتحقق إلا بالتكامل، والعدالة، وصوت لا يُقصى  </h3>
+</section>
+
+
+<section class="slider-section">
+  <div class="slider-wrapper">
+<h2 class="slider-title" 
+    data-ar="شاهد لقطاتنا" 
+    data-en="Watch Our Moments">
+  شاهد لقطاتنا
+</h2>
+    <div class="slider-container">
+      <div class="arrow arrow-left">&#10094;</div>
+      <div class="arrow arrow-right">&#10095;</div>
+      <div class="slider-track">
+               <div class="slider-item"><img src="img/مد1.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item"><img src="img/مد2.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/مد3.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/مد4.jpg" alt="صورة تعليم 3"></div>
+        <div class="slider-item"><img src="img/مد5.jpg" alt="صورة تعليم 4"></div>
+         <div class="slider-item"><img src="img/مد6.jpg" alt="صورة تعليم 4"></div>
+        <div class="slider-item center"><img src="img/مد8.jpg" alt="صورة تعليم 5"></div>
+         <div class="slider-item"><img src="img/مد7.jpg" alt="صورة تعليم 1"></div>
+        <div class="slider-item"><img src="img/مد9.jpg" alt="صورة تعليم 2"></div>
+        <div class="slider-item"><img src="img/مد10.jpg" alt="صورة تعليم 3"></div>
+         <div class="slider-item"><img src="img/مد11.jpg" alt="صورة تعليم 3"></div>
+          <div class="slider-item"><img src="img/مد12.jpg" alt="صورة تعليم 4"></div>
+                 <div class="slider-item"><img src="img/مد13.jpg" alt="صورة تعليم 4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-text">
+    <h2>
+  <span data-ar="كالبنيان" data-en="Klbonyan">كالبنيان</span>
+</h2>
+
+<p class="footer-subtitle" 
+      data-ar="نرفع أعمدة الحلم...<br> على أرض العزيمة" 
+       data-en="We Raise the Pillars of Dream<br>on the Land of Determination">
+    نرفع أعمدة الحلم...<br> على أرض العزيمة
+</p>
+
+
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links">
+        <h4 data-ar="الصفحات" data-en="Pages">الصفحات</h4>
+        <ul>
+          <li><a href="index1.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="من نحن.html" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+          <li><a href="index1.html" data-ar="البرامج" data-en="Programs">البرامج</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-terms">
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <ul>
+          <li><a href="خدمات الاغاثة.html" data-ar="خدمات الإغاثة" data-en="Relief Services">خدمات الإغاثة</a></li>
+          <li><a href="اليه الشكاوي.html" data-ar="آليه الشكاوي" data-en="Complaints Mechanism">آليه الشكاوي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-links">
+        <h4 data-ar="شبكات التواصل" data-en="Social Networks">شبكات التواصل</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+ <li><a href="https://wa.me/9720567033297" target="_blank" data-ar="عبر كافة الشبكات الفلسطينية" data-en="Via all Palestinian networks">عبر كافة الشبكات الفلسطينية</a></li>
+          <li><a href="https://wa.me/972567033297" data-ar="عبر الواتساب" data-en="Via WhatsApp">عبر الواتساب</a></li>        </ul>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/kl.bonyan"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/972567033297"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+ <p class="footer-rights">
+    All Rights Reserved © 2025
+    <a href="mailto:klbonyant@gmail.com">@klbonyant.com</a>
+</p>
+
+</footer>
+<script>
+const track = document.querySelector('.slider-track');
+const items = Array.from(document.querySelectorAll('.slider-item'));
+const container = document.querySelector('.slider-container');
+
+let centerIndex = Math.floor(items.length / 2);
+
+function updateCenter() {
+  items.forEach(item => item.classList.remove('center'));
+  const centerItem = items[centerIndex];
+  centerItem.classList.add('center');
+
+  const containerRect = container.getBoundingClientRect();
+  const itemRect = centerItem.getBoundingClientRect();
+
+  
+  let translateX = itemRect.left + itemRect.width/2 - (containerRect.left + containerRect.width/2);
+
+  
+  const currentTransform = track.style.transform.match(/-?\d+\.?\d*/);
+  const currentTranslate = currentTransform ? parseFloat(currentTransform[0]) : 0;
+  track.style.transform = `translateX(${currentTranslate - translateX}px)`;
+}
+
+
+updateCenter();
+
+
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  if(centerIndex > 0) {
+    centerIndex--;
+    updateCenter();
+  }
+});
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  if(centerIndex < items.length - 1) {
+    centerIndex++;
+    updateCenter();
+  }
+});
+
+</script>
+<script>
+let currentLang = "ar";
+
+const translations = {
+  ar: {
+    homeText: "الرئيسية",
+    programText: "البرامج",
+    educationText: "التمكين المدني والاجتماعي والاقتصادي",
+    sectionTitle: "التمكين المدني والاجتماعي والاقتصادي",
+   programSubtitle: `في سياقات الأزمات الممتدة يعمل هذا البرنامج ضمن ثلاثة محاور متكاملة: التمكين الاجتماعي للفئات الضعيفة (SEP-V)، التمكين المدني والسياسي (CPE)، والتمكين الاقتصادي (SE).
+
+يأتي هذا التدخل استجابةً للحاجة المتزايدة إلى دعم المجتمعات المتضررة من النزاع، وتعزيز قدرتها على الصمود، من خلال رفع الوعي بالحقوق، وبناء المهارات، وتوفير فرص الاستقلال المعيشي والدعم النفسي والاجتماعي، بما يسهم في خلق بيئة أكثر عدلًا وكرامة، وتمكينًا للأفراد للمشاركة الفاعلة في إعادة بناء مجتمعهم. مركزين على الفئة الاكثر حاجة وهم الأطفال والنساء والشباب وذوي الإعاقة.`,
+    ideaTitle: "الأهداف",
+    outputTitle: "المخرجات",
+    activitiesTitle: "ماذا يقدم البرنامج؟",
+    recommendationsTitle: "التوصيات",
+    idealist: [
+      "نسعى في كالبنيان إلى تمكين الإنسان، لا بصفته مستفيدًا فقط، بل فاعلًا وشريكًا في صناعة التغيير. من خلال برنامج التمكين المدني والاجتماعي والاقتصادي، نطمح إلى بناء قدرات الأفراد، خاصة من الفئات الهشة، ليمتلكوا أدوات المشاركة، وحق اتخاذ القرار، والقدرة على إعالة أنفسهم بكرامة. فتمكين المرأة، والشباب، وذوي الإعاقة، ليس فقط حقًا، بل هو ركيزة للصمود المجتمعي، وحجر أساس لإعادة بناء نسيج اجتماعي عادل."
+    ],
+    outputlist: [
+      "تتمثل في نشوء فئات مجتمعية أكثر وعيًا بحقوقها، وأكثر قدرة على المشاركة في الحياة المدنية وصنع القرار، فئات قادرة على كسر دائرة التبعية من خلال امتلاك أدوات اقتصادية ونفسية ومعرفية تعزز استقلالها. نسعى لأن نرى شابًا يقود مبادرة، وامرأةً تدير مشروعها، وطفلًا يتحدث عن حقه، ومجتمعًا يتماسك رغم الأزمات، مدعومًا بحوارات رقمية وتفاعل مجتمعي مستمر، حيث يصبح التمكين واقعًا لا شعارًا."
+    ],
+    activitieslist: [
+  "بناء قدرات الشباب والنساء وذوي الإعاقة من خلال تدريبات وورش عمل متخصصة.",
+  "تعزيز المشاركة المدنية عبر دعم المبادرات المجتمعية وتشجيع العمل التطوعي.",
+  "توفير الدعم النفسي لتعزيز الصمود الفردي والجماعي في وجه الأزمات.",
+  "فتح مشاريع صغيرة تحقق الاستقلال المعيشي من خلال برامج تدريب مهني وتقديم منح نقدية.",
+  "تنظيم حملات توعية لتعزيز الوعي بحقوق الإنسان والمشاركة السياسية والاجتماعية.",
+  "تنفيذ لقاءات حوارية رقمية وميدانية بمشاركة الشباب والنساء وذوي الإعاقة.",
+  "التنسيق مع المؤسسات المحلية والدولية لضمان استدامة البرامج وفعاليتها."
+],
+
+    recommendationslist: [
+"لتعزيز أثر برنامج التمكين المدني والاجتماعي والاقتصادي، توصي كالبنيان بتوسيع الشراكات مع المؤسسات الحكومية والمجتمعية، وتوفير تمويل مرن ومستدام يلبّي احتياجات الفئات الأكثر هشاشة، مع التركيز على النساء، الشباب، وذوي الإعاقة. كما تؤكد على أهمية تطوير أدوات رقمية تفاعلية تُعزّز من الحوار والمشاركة، وتنفيذ حملات مناصرة رقمية تُوصل صوت المجتمعات إلى العالم، إلى جانب بناء آليات تقييم تشاركية تضمن التحسين المستمر وجودة الأثر، لأن التمكين الحقيقي لا يتحقق إلا بالتكامل، والعدالة، وصوت لا يُقصى."
+ ]
+ },
+ 
+en: {
+    homeText: "Home",
+    programText: "Programs",
+    educationText: "Civil, Social, and Economic Empowerment",
+    sectionTitle: "Civil, Social, and Economic Empowerment",
+    programSubtitle: "In the context of protracted crises, this program operates along three integrated axes: Social Empowerment for vulnerable groups (SEP-V), Civil and Political Empowerment (CPE), and Economic Empowerment (SE). This intervention responds to the increasing need to support communities affected by conflict and to enhance their resilience by raising awareness of rights, building skills, and providing opportunities for livelihoods and psychosocial support. This contributes to creating a more just and dignified environment, empowering individuals to actively participate in rebuilding their communities, with a focus on the most vulnerable groups: children, women, youth, and persons with disabilities.",
+    ideaTitle: "Objectives",
+    outputTitle: "Outputs",
+    activitiesTitle: "What the program offers?",
+    recommendationsTitle: "Recommendations",
+    idealist: [
+      "At Kalbonyan, we strive to empower individuals not merely as beneficiaries, but as active agents and partners in driving change. Through the Civil, Social, and Economic Empowerment program, we aim to build the capacities of individuals—especially those from vulnerable groups—so they possess the tools for participation, the right to make decisions, and the ability to sustain themselves with dignity. Empowering women, youth, and persons with disabilities is not only a right, but also a cornerstone of community resilience and a foundational step toward rebuilding a just social fabric."
+    ],
+    outputlist: [
+      "It is embodied in the emergence of social groups that are more aware of their rights and more capable of participating in civic life and decision-making—groups able to break the cycle of dependency by possessing economic, psychological, and cognitive tools that enhance their independence. We aspire to see a young person leading an initiative, a woman managing her own project, a child speaking up for their rights, and a community that remains cohesive despite crises, supported by digital dialogues and ongoing community engagement, where empowerment becomes a reality, not just a slogan.",
+     
+    ],
+    activitieslist: [
+  "Building the capacities of youth, women, and persons with disabilities through specialized trainings and workshops.",
+  "Enhancing civic engagement by supporting community initiatives and encouraging volunteer work.",
+  "Providing psychological support to strengthen individual and collective resilience in the face of crises.",
+  "Launching small projects to achieve economic independence through vocational training programs and cash grants.",
+  "Organizing awareness campaigns to promote knowledge of human rights and political and social participation.",
+  "Conducting digital and field dialogue sessions involving youth, women, and persons with disabilities.",
+  "Coordinating with local and international institutions to ensure the sustainability and effectiveness of programs."
+],
+
+    recommendationslist: [
+      "To enhance the impact of the Civil, Social, and Economic Empowerment Program, Kalbonyan recommends expanding partnerships with governmental and community institutions, and providing flexible and sustainable funding that meets the needs of the most vulnerable groups, with a focus on women, youth, and persons with disabilities. It also emphasizes the importance of developing interactive digital tools that foster dialogue and participation, implementing digital advocacy campaigns to amplify the voices of communities globally, and establishing participatory evaluation mechanisms to ensure continuous improvement and impact quality. True empowerment can only be achieved through integration, justice, and an inclusive voice."
+    ]
+  }
+};
+
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  const t = translations[currentLang];
+
+ 
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+
+ 
+  document.getElementById("section-title").textContent = t.sectionTitle;
+  document.getElementById("program-subtitle").textContent = t.programSubtitle;
+  document.getElementById("idea-title").textContent = t.ideaTitle;
+  document.getElementById("output-title").textContent = t.outputTitle;
+  document.getElementById("activities-title").textContent = t.activitiesTitle;
+  document.getElementById("recommendations-title").textContent = t.recommendationsTitle;
+
+
+  ["idea-list", "output-list", "activities-list", "recommendations-list"].forEach(id => {
+    const ul = document.getElementById(id);
+    if (ul) {
+      ul.innerHTML = "";
+      const listName = id.replace("-list","");
+      t[listName + "list"].forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  });
+
+  
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelector(".lang-btn").textContent = currentLang === "ar" ? "EN" : "AR";
+  
+}
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('show'); 
+}
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  const submenu = event.target.nextElementSibling;
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+
+</body>
+</html>
