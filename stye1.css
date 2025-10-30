@@ -1,0 +1,732 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, white, rgb(179, 171, 171), #c3cecc);
+  color: #fff;
+}
+
+.donation-text {
+  text-align: center;
+  padding: 20px 15px;
+ background: linear-gradient(90deg, #aeafae, #ecd09f);
+  margin: 50px auto 20px; /* زيادة المسافة من الأعلى */
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.crypto-icon {
+  transform: rotate(0deg); /* إزالة أي دوران */
+  display: inline-block;
+  font-size: 50px; /* حجم مناسب للبطاقة */
+  color: #F3BA2F; /* اللون الأصفر الرسمي لـ Binance */
+/* لون البيتكوين البرتقالي */
+}
+.donation-text h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 10px;
+  color: #333;
+  background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+  border: 1.5px solid #F0CC8E; /* أخف من السابق */
+  border-radius: 20px; /* أكثر انحناءً */
+  padding: 12px 18px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس */
+.donation-text h2:hover {
+  background: linear-gradient(135deg, #fff8e1, #ffe8b3);
+  border-color: #f5c542;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+
+.donation-text h3 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.donation-text p {
+  font-size: clamp(1rem, 3.5vw, 1.1rem);
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.language-switcher {
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+  display: inline-block;
+}
+
+.language-switcher select {
+  padding: 10px 40px 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.language-switcher::after {
+  content: "▼";
+  font-size: 12px;
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+   transition: top 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.language-switcher select:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.language-switcher:hover::after {
+  color: #fff;
+}
+
+.language-switcher select:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.language-switcher:focus-within::after {
+  top: 45%; 
+  transform: translateY(-50%) rotate(180deg); 
+}
+
+
+.section-frame {
+  position: relative;
+  margin: 30px auto;
+  padding: 25px 20px;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgb(243, 239, 241), rgba(239, 237, 243, 0.2));
+  border-radius: 16px;
+  border: 3px solid #fff;
+  box-shadow: 8px 8px 18px rgba(255,255,255,0.08), -8px -8px 18px rgba(0,0,0,0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 22px rgba(255,255,255,0.1), -10px -10px 22px rgba(0,0,0,1);
+}
+.donation-heading {
+  text-align: center;
+  margin: 70px 0 50px;
+  position: relative;
+}
+
+.donation-heading h2 {
+  font-size: 36px;
+  font-weight: 900;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(#003087);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  animation: pop 1s ease forwards;
+}
+
+.donation-heading h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 6px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #003087);
+  box-shadow: 0 0 12px rgba(255,106,0,0.8), 0 0 18px rgba(238,9,121,0.6);
+  animation: glow 2s infinite alternate;
+}
+
+.donation-heading h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+  animation: shine 4s infinite;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes glow {
+  0% { opacity: 0.5; transform: scaleX(0.9); }
+  100% { opacity: 1; transform: scaleX(1.05); }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+
+.donation-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.donation-card {
+  position: relative;
+  width: 280px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  box-shadow: 10px 10px 25px rgba(0,0,0,0.1), -10px -10px 25px rgba(104, 97, 97, 0.9);
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.donation-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 15px 15px 35px rgba(0,0,0,0.15), -15px -15px 35px rgba(255,255,255,1);
+}
+
+.donation-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg, #ff6a00, #ee0979, #003087, #0f2027, #ff6a00);
+  animation: rotate 6s linear infinite;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+.donation-card .icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.donation-card:hover .icon {
+  color: #ff6a00;
+  transform: scale(1.2);
+}
+
+.donation-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.donation-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.donation-card.paypal .icon {
+  color: #003087; 
+}
+
+.donation-card.visa .icon {
+  color: #142787; 
+}
+
+.donation-card.bank .icon {
+  color: #2E7D32;
+}
+
+.donate-btn {
+  padding: 12px 25px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #707271, #F0CC8E);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.transparency-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+  text-align: center;
+  overflow: hidden;
+}
+
+.transparency-section p {
+  font-size: 1.5rem;
+  color: #222;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+.social-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, rgb(243, 239, 241), rgba(239, 237, 243, 0.2));
+  border: 2px solid rgba(21, 19, 19, 0.3);
+  border-radius: 25px 5px 25px 5px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2), inset 0 0 10px rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 700;
+  font-size: 24px;
+  color: #222;
+  font-family: 'Cairo', sans-serif;
+}
+
+.divider-with-text::before,
+.divider-with-text::after {
+  content: "";
+  flex: 1;
+  margin: 0 15px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.social-buttons .btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-buttons .btn i {
+  font-size: 22px;
+  background: #fff;
+  color: #25D366;
+  border-radius: 50%;
+  padding: 6px;
+  transition: transform 0.3s ease;
+}
+
+.social-buttons .whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+}
+
+.social-buttons .whatsapp:hover {
+  background: linear-gradient(135deg, #128C7E, #25D366);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(18, 140, 126, 0.6);
+}
+
+.social-buttons .whatsapp:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+.social-button{
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.social-button .btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000; /* النص أسود */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  background-color: #fff; /* خلفية الزر أبيض */
+}
+
+.social-button .btn i {
+  font-size: 22px;
+  background: #000; /* دائرة الأيقونة سوداء */
+  color: #fff;      /* أيقونة الهاتف باللون الأبيض */
+  border-radius: 50%;
+  padding: 6px;
+  transition: transform 0.3s ease;
+}
+
+.social-button .whatsapp {
+  background-color: #fff; /* زر الواتساب أبيض */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.social-button .whatsapp:hover {
+  background-color: #000;  /* عند المرور بالماوس يصبح الزر أسود */
+  color: #fff;             /* النص يصبح أبيض */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+
+.social-button .whatsapp:hover i {
+  transform: scale(1.2) rotate(10deg);
+  background: #fff; /* الأيقونة تصبح بيضاء عند الهوفر */
+  color: #000;      /* رمز الهاتف يصبح أسود */
+}
+
+.social-heading {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.social-heading h2 {
+  font-size: 22px;
+  color: #222;
+  font-weight: bold;
+  margin: 0;
+}
+
+.social-buttons-modern {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.social-buttons-modern .btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.social-buttons-modern .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.social-buttons-modern .btn i {
+  transition: transform 0.3s ease;
+}
+
+.social-buttons-modern .btn:hover i {
+  transform: scale(1.2);
+}
+
+.social-buttons-modern .facebook {
+  background: #1877F2;
+}
+
+.social-buttons-modern .facebook:hover {
+  background: #145DBF;
+}
+
+.social-buttons-modern .instagram {
+  background: linear-gradient(135deg, #E1306C, #F77737);
+}
+
+.social-buttons-modern .instagram:hover {
+  background: linear-gradient(135deg, #F77737, #E1306C);
+}
+
+.social-buttons-modern .tiktok {
+  background: black;
+}
+
+.social-buttons-modern .tiktok:hover {
+  background: black;
+}
+
+
+
+
+
+
+
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, white, rgb(179, 171, 171), #c3cecc);
+  color: #fff;
+}
+
+/* ====== النصوص ====== */
+.donation-text {
+  text-align: center;
+  padding: 20px 15px;
+  background: linear-gradient(90deg, #aeafae, #ecd09f);
+  margin: 40px auto 20px;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.crypto-icon {
+  display: inline-block;
+  font-size: 50px;
+  color: #F3BA2F;
+}
+
+.donation-text h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #858a8d;
+}
+
+.donation-text h3 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.donation-text p {
+  font-size: clamp(1rem, 3.5vw, 1.1rem);
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ====== مبدل اللغة ====== */
+
+
+
+/* ====== الإطارات ====== */
+.section-frame {
+  margin: 30px auto;
+  padding: 25px 20px;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgb(243, 239, 241), rgba(239, 237, 243, 0.2));
+  border-radius: 16px;
+  border: 3px solid #fff;
+  box-shadow: 8px 8px 18px rgba(255,255,255,0.08), -8px -8px 18px rgba(0,0,0,0.9);
+  transition: transform 0.3s ease;
+}
+
+.section-frame:hover {
+  transform: translateY(-5px);
+}
+
+/* ====== العنوان ====== */
+.donation-heading {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.donation-heading h2 {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: 'Cairo', sans-serif;
+  color: #003087;
+}
+
+/* ====== البطاقات ====== */
+.donation-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.donation-card {
+  width: 280px;
+  padding: 25px 20px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  box-shadow: 10px 10px 25px rgba(0,0,0,0.1), -10px -10px 25px rgba(104, 97, 97, 0.9);
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* ====== الزر ====== */
+.donate-btn {
+  padding: 12px 25px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #707271, #F0CC8E);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.donate-btn:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ====== الفاصل ====== */
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+  font-weight: 700;
+  font-size: 20px;
+  color: #222;
+}
+
+/* ====== أزرار التواصل ====== */
+.social-buttons-modern {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-buttons-modern .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* ====== تحسينات للجوال ====== */
+@media (max-width: 768px) {
+  .donation-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .donation-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .donation-heading h2 {
+    font-size: 28px;
+  }
+
+  .donation-text {
+    margin: 20px auto;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation-heading h2 {
+    font-size: 22px;
+  }
+
+  .donation-card {
+    width: 95%;
+    padding: 20px 15px;
+  }
+
+  .donate-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .social-buttons-modern {
+    gap: 15px;
+  }
+
+  .social-buttons-modern .btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .language-switcher select {
+    font-size: 14px;
+    padding: 8px 30px 8px 15px;
+  }
+}

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>جمع التبرعات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stye1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="script.js" defer></script>
+  
+   
+   
+</head>
+<body>
+
+  <!-- رأس الصفحة -->
+ 
+    <!-- يمين: الصفحة الرئيسية + تواصل معنا -->
+    
+  <section class="intro" style="
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  direction: rtl;
+  flex-wrap: wrap; /* لتفادي كسر التصميم */
+">
+
+  <!-- 🟩 يمين: الصفحة الرئيسية + تواصل معنا -->
+  <div class="header-right" style="
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 6px;
+  ">
+<!-- روابط الرأس -->
+
+ <!-- روابط الرأس عمودية -->
+<div class="header-right" style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+
+  <a href="index.html" 
+     data-ar='<i class="fa-solid fa-house" style="color:black; margin-left:5px;"></i> الرئيسية' 
+     data-en='<i class="fa-solid fa-house" style="color:black; margin-left:5px;"></i> Home'
+     style="
+       display:flex;
+       align-items:center;
+       gap:6px;
+       font-weight:600;
+       color:#0c0c0c;
+       text-decoration:none;
+       font-size:16px;
+       transition:0.3s;
+     ">
+    <i class="fa-solid fa-house" style="color:black;"></i>
+    الرئيسية
+  </a>
+
+  <a href="#contact" 
+     data-ar='<i class="fa-solid fa-phone" style="color:black; margin-left:5px;"></i> تواصل معنا' 
+     data-en='<i class="fa-solid fa-phone" style="color:black; margin-left:5px;"></i> Contact Us'
+     style="
+       display:flex;
+       align-items:center;
+       gap:6px;
+       font-weight:600;
+       color:#0c0c0c;
+       text-decoration:none;
+       font-size:16px;
+       transition:0.3s;
+     ">
+    <i class="fa-solid fa-phone" style="color:black;"></i>
+    تواصل معنا
+  </a>
+
+</div>
+
+
+  </div>
+
+  <!-- 🟦 الوسط: شعار الحملة -->
+  <div class="logo-area" style="text-align:center; flex:1;">
+    <img src="img/حملة.jpg" alt="Logo" style="
+      height:180px;
+      width:180px;
+      border-radius:50%;
+      object-fit: cover;
+      border: 4px solid #858a8d;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    ">
+  </div>
+
+  <!-- 🟥 يسار: تغيير اللغة -->
+  <div class="header-left">
+  <select id="languageSelect">
+    <option value="ar">عربي</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+<style>
+.header-left {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* تنسيق select عصري */
+#languageSelect {
+  padding: 8px 14px;              
+  border-radius: 10px;            
+  border: none;                    
+   background: linear-gradient(135deg, #7b7e7f, #858a8d); /* تدرج برتقالي جميل */
+  color: white;                 /* نص داكن لتباين ممتاز */
+  font-weight: 600;                
+  font-size: 14px;                 
+  cursor: pointer;                 
+  transition: all 0.3s ease;      
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* ظل أكثر أناقة */
+}
+
+/* تأثير عند التمرير */
+#languageSelect:hover {
+  background: linear-gradient(135deg, #7b7e7f, #858a8d);
+}
+
+/* إزالة السهم الافتراضي في بعض المتصفحات */
+#languageSelect::-ms-expand {
+  display: none;
+}
+
+/* خيارات القائمة */
+#languageSelect option {
+  color: #1f1f1f;
+  background-color: #fff;
+  font-weight: 500;
+}
+</style>
+
+</section>
+
+<!-- Media Queries داخل الصفحة لتصغير العناصر للشاشات الصغيرة جداً -->
+<style>
+@media (max-width: 320px) {
+  .intro {
+    flex-direction: row; /* نبقي العناصر أفقي */
+    align-items: center;
+    justify-content: space-between; /* توزيع متساوي بين العناصر */
+    padding: 5px 8px; /* تصغير البادينغ */
+  }
+
+  .header-right, .header-left {
+    flex-direction: row; /* عناصر الروابط والاختيار أفقياً */
+    justify-content: flex-start;
+    gap: 4px; /* تقليل المسافة بينهم */
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .header-right a {
+    font-size: 12px; /* تصغير النصوص لتناسب العرض */
+    margin: 0 2px;
+  }
+
+  .header-left select {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .logo-area img {
+    height: 80px; /* تصغير الصورة */
+    width: 80px;
+    border-width: 2px;
+  }
+}
+</style>
+
+
+
+  <div class="donation-text">
+    <h2 data-ar=" أملٌ يُبنى" data-en="Building Hope"> أملٌ يُبنى</h2>
+    <h3 data-ar="حملة لإغاثة أهل غزة" data-en="Gaza Relief Campaign">حملة لإغاثة أهل غزة</h3>
+    <p data-ar="في غزة.. حيث لا صوت يعلو فوق صوت المعاناة لنمدّ أيدينا لمن يعيشون في الخيام، بين الألم والصبر ، تبرعكم هو كرامة تُعاد، وابتسامة تُرسم على وجه أم أو طفل ، شارك ببناء فصل دراسي، أو نقطة طبية، أو خيمة تلمّ شمل عائلة مشتتة." 
+       data-en="In Gaza, where no voice rises above the sound of suffering, we extend our hands to those living in tents — between pain and patience.
+Your donation restores dignity and draws a smile on the face of a mother or a child.
+Join us in building a classroom, a medical point, or a shelter that reunites a displaced family.
+">
+    في غزة.. حيث لا صوت يعلو فوق صوت المعاناة لنمدّ أيدينا لمن يعيشون في الخيام، بين الألم والصبر ، تبرعكم هو كرامة تُعاد، وابتسامة تُرسم على وجه أم أو طفل ، شارك ببناء فصل دراسي، أو نقطة طبية، أو خيمة تلمّ شمل عائلة مشتتة.
+    </p>
+  </div>
+
+  <div class="section-frame">
+    <div class="donation-heading">
+      <h2 data-ar="وسائل تبرع موثوقة وآمنة" data-en="Trusted & Secure Donation Methods">
+        وسائل تبرع موثوقة وآمنة
+      </h2>
+    </div>
+
+    <div class="donation-card-container">
+ <!-- بطاقة العملات الرقمية -->
+
+
+    
+     <div class="donation-card paypal">
+  <div class="icon"><i class="fab fa-paypal"></i></div>
+  <h3 data-ar="باي بال" data-en="PayPal">باي بال</h3>
+  <p data-ar="ادفع بسهولة عبر حسابك" data-en="Pay easily via your account">ادفع بسهولة عبر حسابك</p>
+  
+  <!-- هنا نضع رابط باي بال -->
+  <a href="https://www.paypal.com/donate/?hosted_button_id=CTDK9YLBZBHLY" 
+     target="_blank" 
+     class="donate-btn" 
+     data-ar="تبرع الآن" 
+     data-en="Donate Now">
+    تبرع الآن
+  </a>
+</div>
+
+
+
+<div class="donation-card visa">
+  <div class="icon"><i class="fab fa-bitcoin crypto-icon"></i></div>
+  
+  <h3 data-ar="العملات الرقمية" data-en="Cryptocurrency">العملات الرقمية</h3>
+  
+  <p data-ar="ساهم معنا بسهولة وأمان عبر USDT على شبكة TRON" 
+     data-en="Donate easily and securely using USDT on the TRON network">
+    ساهم معنا بسهولة وأمان عبر USDT على شبكة TRON
+  </p>
+  
+    <a 
+   class="donate-btn" 
+   id="openModal" 
+   data-ar="تبرع الآن" 
+   data-en="Donate Now">
+  تبرع الآن
+</a>
+
+</div>
+
+<!-- النافذة المنبثقة -->
+<div id="qrModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+     background: rgba(0,0,0,0.6); z-index:1000;">
+  
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+              background:white; padding:30px; border-radius:16px; text-align:center; 
+              max-width:420px; width:90%; box-shadow:0 6px 30px rgba(0,0,0,0.4); 
+              display:flex; flex-direction:column; align-items:center; font-family:'Cairo',sans-serif;">
+              
+    <h3 data-ar="امسح QR للتبرع" data-en="Scan QR to Donate" style="font-size:20px; margin-bottom:15px; color:#333;">
+      امسح QR للتبرع
+    </h3>
+    
+    <img src="img/Screenshot 2025-10-26 200449.png" alt="TRON QR" 
+         style="width:200px; margin:15px 0; border-radius:8px; border:2px solid #F0CC8E;">
+    
+    <!-- نوع الشبكة -->
+    <p style="font-size:15px; color:#444; margin:8px 0;">
+      <strong>نوع الشبكة:</strong> TRON (TRC20)
+    </p>
+
+    <!-- عنوان المحفظة -->
+    <p id="walletAddress" 
+       style="word-break: break-all; background:#0b0b0b; color:#F0CC8E; 
+              padding:10px 12px; border-radius:8px; margin-top:5px; font-size:14px; direction:ltr;">
+       TFeVnT2di1Ycnn3xBBT7HWqcESdV9R8fba
+    </p>
+
+    <!-- زر نسخ العنوان -->
+   <button id="copyAddress" 
+        style="
+          margin-top:12px; 
+          padding:12px 20px; /* زيادة الحجم الداخلي */
+          border:none; 
+          background:#15803D; 
+          color:white; 
+          border-radius:8px; /* زاوية أكبر قليلاً */
+          cursor:pointer; 
+          font-size:16px; /* تكبير النص */
+          font-weight:600; /* نص عريض أكثر */
+        ">
+  📋 نسخ العنوان
+</button>
+
+    <!-- زر إغلاق -->
+    <button id="closeModal" 
+            style="margin-top:15px; padding:10px 20px; border:none; 
+                   background:#F0CC8E; color:#000; font-weight:bold; 
+                   border-radius:8px; cursor:pointer; transition:0.3s;">
+      إغلاق
+    </button>
+  </div>
+</div>
+
+<script>
+  const openModal = document.getElementById("openModal");
+  const qrModal = document.getElementById("qrModal");
+  const closeModal = document.getElementById("closeModal");
+  const copyBtn = document.getElementById("copyAddress");
+  const walletAddress = document.getElementById("walletAddress").innerText;
+
+  // فتح النافذة
+  openModal.addEventListener("click", () => {
+    qrModal.style.display = "block";
+  });
+
+  // إغلاق النافذة
+  closeModal.addEventListener("click", () => {
+    qrModal.style.display = "none";
+  });
+
+  // إغلاق عند الضغط خارج المحتوى
+  qrModal.addEventListener("click", (e) => {
+    if(e.target === qrModal){
+      qrModal.style.display = "none";
+    }
+  });
+
+  // نسخ العنوان
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(walletAddress);
+    copyBtn.innerText = "✅ تم النسخ!";
+    setTimeout(() => {
+      copyBtn.innerText = "📋 نسخ العنوان";
+    }, 2000);
+  });
+</script>
+
+     <div class="donation-card bank">
+  <div class="icon"><i class="fas fa-university"></i></div>
+  <h3 data-ar=" حسابات بنكية فرعية" data-en="Secondary Bank Accounts">حسابات بنكية فرعية</h3>
+  <p data-ar="لتسهيل التبرع عبر حساباتنا البنكية الفرعية" data-en="To facilitate donations via our sub bank accounts">لتسهيل التبرع عبر حساباتنا البنكية الفرعية</p>
+  
+  <a 
+   class="donate-btn" 
+   id="openBankModal" 
+   data-ar="تبرع الآن" 
+   data-en="Donate Now">
+  تبرع الآن
+</a>
+
+</div>
+
+<!-- نافذة منبثقة للحوالة البنكية -->
+<div id="bankModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+     background: rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:1000;">
+  <div style="background:white; padding:25px; border-radius:12px; text-align:center; max-width:350px; 
+              width:90%; box-shadow:0 6px 25px rgba(0,0,0,0.4); display:flex; flex-direction:column; align-items:center;">
+              
+<p data-ar="لضمان الخصوصية يمكنك التواصل معنا لإتمام التبرع عبر الواتساب" 
+   data-en="To ensure privacy, you can contact us via WhatsApp to complete the donation" 
+   style="font-size:16px; margin-bottom:15px; color:black;">
+  لضمان الخصوصية يمكنك التواصل معنا لإتمام التبرع عبر الواتساب
+</p>
+
+    <a href="https://wa.me/9720567033297" target="_blank" 
+       style="padding:10px 20px; background:#25D366; color:white; border-radius:8px; 
+              text-decoration:none; font-weight:bold; margin-bottom:10px;">
+      WhatsApp
+    </a>
+    
+    <button id="closeBankModal" 
+            style="padding:8px 16px; border:none; background:#F0CC8E; color:#000; border-radius:6px; cursor:pointer;">
+      إغلاق
+    </button>
+  </div>
+</div>
+
+<script>
+  const openBankModal = document.getElementById("openBankModal");
+  const bankModal = document.getElementById("bankModal");
+  const closeBankModal = document.getElementById("closeBankModal");
+
+  // فتح النافذة عند الضغط على زر التبرع
+  openBankModal.addEventListener("click", () => {
+    bankModal.style.display = "flex";
+  });
+
+  // إغلاق النافذة عند الضغط على زر إغلاق
+  closeBankModal.addEventListener("click", () => {
+    bankModal.style.display = "none";
+  });
+
+  // إغلاق عند الضغط خارج النافذة
+  bankModal.addEventListener("click", (e) => {
+    if(e.target === bankModal){
+      bankModal.style.display = "none";
+    }
+  });
+</script>
+
+
+     
+    </div>
+
+    <div class="transparency-section">
+      <p data-ar="نحن نضمن وصول تبرعك لمستحقيه بالكامل" data-en="We ensure your donation reaches those in need in full">
+        نحن نضمن وصول تبرعك لمستحقيه بالكامل
+      </p>
+    </div>
+  </div>
+
+  <div class="social-form" id="contact">
+    <div class="divider-with-text">
+      <span data-ar="تواصل معنا عبر" data-en="Contact us via">تواصل معنا عبر</span>
+    </div>
+
+    <div class="social-buttons">
+      <a href="https://wa.me/9720567033297" target="_blank" class="btn whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+      </a>
+    </div>
+     <div class="social-button">
+  <a class="btn whatsapp" style="pointer-events:none;">
+    <i class="fas fa-phone"></i>
+    <span data-ar="0567033297" data-en="0567033297">0567033297</span>
+  </a>
+</div>
+
+
+    <div class="divider-with-text">
+      <h2 data-ar="تابع كل لحظة" data-en="Follow Every Moment">تابع كل لحظة</h2>
+    </div>
+
+    <div class="social-buttons-modern">
+      <a href="https://www.facebook.com/profile.php?id=100068724481139&locale=ar_AR" target="_blank" class="btn facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/kl.bonyan" target="_blank" class="btn instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@kl.bonyan" target="_blank" class="btn tiktok">
+        <i class="fab fa-tiktok"></i> 
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const langSelect = document.getElementById("languageSelect");
+    const elements = document.querySelectorAll("[data-ar]");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("siteLang") || "ar";
+      langSelect.value = savedLang;
+      changeLanguage(savedLang);
+    });
+
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      localStorage.setItem("siteLang", lang); 
+      changeLanguage(lang);
+    });
+
+    function changeLanguage(lang) {
+      elements.forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+
+      if (lang === "ar") {
+        document.body.dir = "rtl";
+      } else {
+        document.body.dir = "ltr";
+      }
+    }
+  </script>
+
+  <footer style="
+  background:#0c0c0c; 
+  color:#fff; 
+  text-align:center; 
+  padding:30px 25px; 
+  font-size:18px;
+">
+   مبادرة أملٌ يُبنى. جميع الحقوق محفوظة  2025 ©
+</footer>
+
+
+</body>
+</html>
